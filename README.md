@@ -22,7 +22,7 @@ Robin van Rooij
 Rode piste
 
 #### Je focus:
-Surface plane
+Responsive
  
 </details>
 
@@ -36,15 +36,15 @@ Surface plane
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-https://www.samsung.com/nl/
+https://www.ns.nl/
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+NS homepage  
+<img src="/images/nshome.png" width="375px" alt="homepage van de ns site op formaat iPhone 8">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-hier de naam van de pagina  
-<img src="images/dummy-plaatje.jpg" width="375px" alt="omschrijving van de pagina">
+NS abonnementen 
+<img src="images/ns2.png" width="375px" alt="abonnementen page van de ns site op formaat iPhone 8">
  
 </details>
 
