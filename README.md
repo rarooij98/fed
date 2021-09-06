@@ -36,15 +36,16 @@ Responsive
 <summary>uitwerken voor kick-off werkgroep</summary>
 
 ### Je opdracht:
-https://www.ns.nl/
+https://www.centraalmuseum.nl/nl
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-NS homepage  
-<img src="/images/nshome.png" width="375px" alt="homepage van de ns site op formaat iPhone 8">
+homepage  
+<img src="/images/1a.png" width="375px" alt="homepage van het centraal museum">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-NS abonnementen 
-<img src="images/ns2.png" width="375px" alt="abonnementen page van de ns site op formaat iPhone 8">
+about us
+<img src="images/2a.png" width="375px" alt="about us page van het centraal museum">
+<img src="images/2b.jpg" width="375px" alt="about us page van het centraal museum">
  
 </details>
 
