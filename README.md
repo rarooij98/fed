@@ -44,7 +44,6 @@ homepage
 
 #### Screenshot(s) van de tweede pagina (small screen):
 about us
-<img src="images/2a.png" width="375px" alt="about us page van het centraal museum">
 <img src="images/2b.jpg" width="375px" alt="about us page van het centraal museum">
  
 </details>
