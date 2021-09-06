@@ -43,7 +43,7 @@ homepage
 <img src="/images/1a.png" width="375px" alt="homepage van het centraal museum">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-about us
+about us page; de witte tekst beweegt over de afbeelding heen omhoog als je scrolt
 <img src="images/2b.jpg" width="375px" alt="about us page van het centraal museum">
  
 </details>
