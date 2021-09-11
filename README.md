@@ -62,8 +62,7 @@ about us page; de witte tekst beweegt over de afbeelding heen omhoog als je scro
 <img src="images/breakdown-02.jpg" width="375px" alt="breakdown van de 2e pagina">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/breakdown-01menu.jpg" width="375px" alt="breakdown van het menu">
-<img src="images/schets1.jpg" width="375px" alt="breakdown van image carousel">
+<img src="images/carousel.jpg" width="375px" alt="breakdown van image carousel">
 
 ### interessante onderdelen vd pagina:
 - uitklapbaar menu
