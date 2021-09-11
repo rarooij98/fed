@@ -233,8 +233,12 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. bron 1
-2. bron 2
-3. ...
+1. Centraal Museum Utrecht. Alle gebruikte content komt van de site van het museum. (url:https://www.centraalmuseum.nl/nl) Eén van de video's is gelinkt vanuit Vimeo naar de site van het museum: https://player.vimeo.com/video/546015896?dnt=1&loop=1&background=1 
+2. SquareSpace Forum. Scrolling text over a fixed background within a section. Gepost door nsdoyle, 9 juli 2020. 
+(url: https://forum.squarespace.com/topic/165962-scrolling-text-over-a-fixed-background-within-a-section)
+3. CodyHouse. Experiments - HTML, CSS, JS experiments - Full-screen pushing navigation. (url: https://codyhouse.co/gem/full-screen-pushing-navigation)
+4. Font Awesome. Facebook, Twitter, Mail, Youtube en Instagram icoon. (url: https://fontawesome.com/v5.15/icons/twitter?style=brands)
+5. CSS-Tricks. CSS-Only Carousel. Door Chris Coyier, 10 jan 2020. (url: https://css-tricks.com/css-only-carousel)
+6. 
 
 </details>
