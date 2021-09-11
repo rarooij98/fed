@@ -58,11 +58,11 @@ about us page; de witte tekst beweegt over de afbeelding heen omhoog als je scro
 <summary>uitwerken na afloop 2e werkgroep</summary>
 
 ### de hele pagina: 
-<img src="images/schets1.jpg" width="375px" alt="breakdown van de 1e pagina en menu">
-<img src="images/schets2.jpg" width="375px" alt="breakdown van de 2e pagina">
+<img src="images/breakdown-01.jpg" width="375px" alt="breakdown van de 1e pagina en menu">
+<img src="images/breakdown-02.jpg" width="375px" alt="breakdown van de 2e pagina">
 
 ### dynamisch deel (bijv menu): 
-<img src="images/schets3.jpg" width="375px" alt="breakdown van het menu">
+<img src="images/breakdown-01menu.jpg" width="375px" alt="breakdown van het menu">
 
 </details>
 
