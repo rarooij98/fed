@@ -63,11 +63,8 @@ about us page; de witte tekst beweegt over de afbeelding heen omhoog als je scro
 
 ### dynamisch deel (bijv menu): 
 <img src="images/carousel.jpg" width="375px" alt="breakdown van image carousel">
-
-### interessante onderdelen vd pagina:
-- uitklapbaar menu
-- image carousel (pagina 1)
-- text over image sliding effect (pagina 2)
+<img src="images/navigation.jpg" width="375px" alt="breakdown van de navigatie">
+<img src="images/scroll.jpg" width="375px" alt="breakdown van het text over image scrollen">
 
 </details>
 
