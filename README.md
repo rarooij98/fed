@@ -63,7 +63,8 @@ about us page; de witte tekst beweegt over de afbeelding heen omhoog als je scro
 
 ### dynamisch deel (bijv menu): 
 <img src="images/carousel.jpg" width="375px" alt="breakdown van image carousel">
-<img src="images/navigation.jpg" width="375px" alt="breakdown van de navigatie">
+// kan ook de lijst in een flexbox zetten en overflow:scroll gebruiken
+<img src="images/navigation.jpg" width="375px" alt="breakdown van de navigatie"> 
 <img src="images/scroll.jpg" width="375px" alt="breakdown van het text over image scrollen">
 
 </details>
