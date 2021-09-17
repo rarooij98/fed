@@ -1,8 +1,105 @@
-/* CSS Document */
-*, *::after, *::before {
-  box-sizing:border-box;  
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+}
+
+:root {
+  /* custom properties hier */
+  --hoofd-kleur: rgb(250, 248, 239);
+  --accent-kleur: rgb(225, 236, 244);
 }
 
 img {
-  max-width: 200px;
+  width: 90%;
+  margin: 1em 1em;
+}
+
+header {
+  position: relative;
+  background-color: rgb(250, 248, 239);
+}
+
+header img {
+  width: 50%;
+  position: absolute;
+  left: -5em;
+  top: 1em;
+}
+
+header button:first-of-type {
+  position: absolute;
+  left: 6em;
+  top: 12em;
+  padding: 1em;
+  background-color: rgba(0, 0, 0, 0%);
+  border: 1px solid white;
+  color: white;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+header button:last-of-type {
+  position: fixed;
+  right: 2em;
+  top: 6em;
+  padding: 1em;
+  background-color: rgb(255, 255, 255);
+  border: .5px solid rgb(0, 0, 0);
+  color: black;
+}
+
+article button {
+  margin-left: 1em;
+  padding: 1em;
+  background-color: rgb(0, 0, 0, 0%);
+  border: .5px solid black;
+  color: black;
+}
+
+header nav {
+  padding: 1em;
+}
+
+header nav ul {
+  list-style: square;
+}
+
+header nav ul li {
+  padding: .5em;
+}
+
+header nav ul li a {
+  color: rgb(49, 49, 49);
+}
+
+p,
+h2 {
+  margin: 1em 1em;
+}
+
+p {
+  text-transform: uppercase;
+}
+
+h2 {
+  color: black;
+  font-weight: bold;
+}
+
+article a {
+  text-decoration: none;
+}
+
+article {
+  background-color: var(--accent-kleur);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+section:first-of-type ol {
+  display: flex;
+  overflow: scroll;
 }
