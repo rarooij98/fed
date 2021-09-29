@@ -5,6 +5,6 @@ menuknop.addEventListener("click", openen)
 
 function openen() {
     nav.classList.toggle("open")
-    icoon.src = "./images/pijl.svg"; //toggle?
+    icoon.src = "./images/pijl.svg"; //hoe toggle je een img src?
 }
 

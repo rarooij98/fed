@@ -217,6 +217,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 3. CodyHouse. Experiments - HTML, CSS, JS experiments - Full-screen pushing navigation. (url: https://codyhouse.co/gem/full-screen-pushing-navigation)
 4. Font Awesome. Facebook, Twitter, Mail, Youtube en Instagram icoon. (url: https://fontawesome.com/v5.15/icons/twitter?style=brands)
 5. CSS-Tricks. CSS-Only Carousel. Door Chris Coyier, 10 jan 2020. (url: https://css-tricks.com/css-only-carousel)
-6. 
+6. Social media icons gedownload van flaticon.com en gecreerd door Pixel Perfect. (url: https://www.flaticon.com)
 
 </details>

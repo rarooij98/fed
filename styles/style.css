@@ -38,6 +38,11 @@ h3 {
   margin: 0;
 }
 
+h4 {
+  color: crimson;
+  text-align: center;
+}
+
 h5 {
   text-transform: uppercase;
   text-align: center;
@@ -103,23 +108,21 @@ iframe {
 }
 
 header a img {
-  /*hamburger menu button*/
+  /*hamburger menu*/
   z-index: 999;
   position: fixed;
   left: 18em;
   width: 4em;
-  padding: 0;
   top: 4em;
   padding: 1em;
   border-radius: 2em;
   background-color: rgb(255, 255, 255);
-  border: .5px solid rgb(0, 0, 0);
-  color: black;
+  color: rgb(0, 0, 0);
   text-decoration: none;
 }
 
 header a:first-of-type {
-  /*ontdek meer button*/
+  /*ontdek meer link*/
   position: absolute;
   left: 6em;
   top: 10em;
@@ -229,6 +232,11 @@ section:nth-of-type(2) {
   background-color: var(--accent-kleur);
 }
 
+article:nth-of-type(2) img {
+  width: 100vw;
+  margin: 2em 0em 2em 0em;
+}
+
 section:nth-of-type(2) article:nth-of-type(2) a:nth-of-type(2) {
   /*meer info button*/
   margin: 1em;
@@ -287,6 +295,16 @@ section:nth-of-type(5) img {
   margin: 1em;
 }
 
+section:nth-of-type(5) ul {
+  list-style: none;
+  display: flex;
+}
+
+section:nth-of-type(5) ul img {
+  max-width: 2em;
+  max-height: 2em;
+}
+
 /* FOOTER */
 
 footer {
@@ -315,4 +333,141 @@ footer a {
 
 footer h5 {
   margin-bottom: 1.5em;
+}
+
+footer ul {
+  list-style: none;
+  display: flex;
+}
+
+footer ul li:first-of-type {
+  margin-left: 1em;
+}
+
+footer ul li a img {
+  max-width: 2em;
+}
+
+/* EXTRA STYLING VOOR ONTDEK.HTML */
+
+/* HEADER ONTDEK.HTML */
+#ontdek header {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+#ontdek header h1 {
+  position: relative;
+  top: -3em;
+  width: 10em;
+  margin: auto;
+  color: rgb(255, 255, 255);
+}
+
+#ontdek header img {
+  position: static;
+  width: 100vw;
+  top: 0;
+  left: 0;
+  right: 0;
+}
+
+#ontdek header img:nth-of-type(2) {
+  width: 50%;
+  position: absolute;
+  left: -5em;
+  top: 2em;
+}
+
+#ontdek header a {
+  /*hamburger menu link*/
+  position: fixed;
+  left: 18em;
+  width: 4em;
+  top: 4em;
+  padding: 1em;
+  border: none;
+}
+
+#ontdek header a img {
+  /*hamburger menu button*/
+  z-index: 999;
+  position: fixed;
+  left: 18em;
+  width: 4em;
+  top: 4em;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: rgb(255, 255, 255);
+  color: rgb(0, 0, 0);
+  text-decoration: none;
+}
+
+/* ALGEMEEN ONTDEK.HTML */
+
+#ontdek h2 {
+  text-align: center;
+  padding: .5em;
+}
+
+#ontdek article h4 {
+  text-align: left;
+  margin-left: 1em;
+}
+
+#ontdek section, #ontdek article {
+  background-color: rgb(255, 255, 255);
+}
+
+#ontdek section:nth-of-type(3) {
+  background-color: var(--accent-kleur);
+}
+
+#ontdek section p {
+  padding: 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+#ontdek article:first-of-type p {
+  padding: 1.5em;
+  text-align: left;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  line-height: 2em;
+}
+
+#ontdek article p:first-of-type {
+  font-size: 1.2em;
+}
+
+#ontdek article:first-of-type {
+  background-image: url("../images/stoelen.jpeg");
+  background-position: center;
+}
+
+#ontdek section:nth-of-type(2) a {
+  border: solid 0.1em rgb(75, 75, 75);
+  padding: 1em;
+  margin: auto;
+  margin-top: 1em;
+  display: block;
+  width: 12em;
+  text-align: center;
+}
+
+#ontdek main ul { 
+  /*social media iconen positioneren*/
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 1em;
+}
+
+#ontdek main ul li a img {
+  /*social media iconen stylen*/
+  max-width: 2em;
+  margin: 1em;
 }
