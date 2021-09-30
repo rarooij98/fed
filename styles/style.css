@@ -26,7 +26,7 @@ h1 {
 
 h2 {
   color: black;
-  font-weight: bold;
+  font-weight: 700;
   font-size: 1.75em;
   margin-left: .5em;
 }
@@ -107,21 +107,30 @@ iframe {
   pointer-events: none;
 }
 
-header a img {
+header button {
   /*hamburger menu*/
   z-index: 999;
   position: fixed;
   left: 18em;
   width: 4em;
+  height: 4em;
   top: 4em;
   padding: 1em;
   border-radius: 2em;
   background-color: rgb(255, 255, 255);
+  background-image: url("../images/hamburger.png");
+  background-repeat: no-repeat;
+  background-size: 2em;
+  background-position: center;
   color: rgb(0, 0, 0);
-  text-decoration: none;
 }
 
-header a:first-of-type {
+header button:focus {
+  transform: scale(120%);
+  background-color: var(--accent-kleur);
+}
+
+header a {
   /*ontdek meer link*/
   position: absolute;
   left: 6em;
@@ -132,6 +141,12 @@ header a:first-of-type {
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
+}
+
+header a:focus,
+header a:active {
+  background-color: rgb(34, 34, 34);
+  border: none;
 }
 
 header ul {
@@ -148,7 +163,7 @@ header ul li a:first-of-type {
   font-size: 1.2em;
   text-decoration: underline;
 
-  /* resetten van de styling geerfd van header-a:first-of-type */
+  /* resetten van de styling geerfd van header a */
   position: static;
   padding: 0;
   border: none;
@@ -170,10 +185,18 @@ nav {
   transition: 2s;
 }
 
+button {
+  transition: .5s;
+}
+
 nav.open {
   display: relative;
   transform: translateX(0%);
   /* schuift de navigatie terug in beeld */
+}
+
+button.open {
+  background-image: url("../images/pijl.png");
 }
 
 nav ul {
@@ -214,7 +237,6 @@ article a:nth-of-type(3) {
   border: .5px solid black;
   color: black;
   width: 30%;
-  font-weight: bold;
 }
 
 section:first-of-type {
@@ -340,15 +362,19 @@ footer ul {
   display: flex;
 }
 
+footer ul li a img {
+  /* social media icons */
+  max-width: 2em;
+  margin-bottom: 2em;
+}
+
 footer ul li:first-of-type {
   margin-left: 1em;
 }
 
-footer ul li a img {
-  max-width: 2em;
-}
-
+/**********************************/
 /* EXTRA STYLING VOOR ONTDEK.HTML */
+/**********************************/
 
 /* HEADER ONTDEK.HTML */
 #ontdek header {
@@ -366,6 +392,7 @@ footer ul li a img {
 }
 
 #ontdek header img {
+  /* tuin foto */
   position: static;
   width: 100vw;
   top: 0;
@@ -374,34 +401,21 @@ footer ul li a img {
 }
 
 #ontdek header img:nth-of-type(2) {
+  /* logo */
   width: 50%;
   position: absolute;
   left: -5em;
   top: 2em;
 }
 
-#ontdek header a {
-  /*hamburger menu link*/
+#ontdek header button {
+  /*hamburger menu*/
   position: fixed;
   left: 18em;
   width: 4em;
   top: 4em;
   padding: 1em;
   border: none;
-}
-
-#ontdek header a img {
-  /*hamburger menu button*/
-  z-index: 999;
-  position: fixed;
-  left: 18em;
-  width: 4em;
-  top: 4em;
-  padding: 1em;
-  border-radius: 2em;
-  background-color: rgb(255, 255, 255);
-  color: rgb(0, 0, 0);
-  text-decoration: none;
 }
 
 /* ALGEMEEN ONTDEK.HTML */
@@ -416,7 +430,8 @@ footer ul li a img {
   margin-left: 1em;
 }
 
-#ontdek section, #ontdek article {
+#ontdek section,
+#ontdek article {
   background-color: rgb(255, 255, 255);
 }
 
@@ -458,7 +473,7 @@ footer ul li a img {
   text-align: center;
 }
 
-#ontdek main ul { 
+#ontdek main ul {
   /*social media iconen positioneren*/
   display: flex;
   list-style: none;

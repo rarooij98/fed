@@ -124,33 +124,45 @@ about us page; de witte tekst beweegt over de afbeelding heen omhoog als je scro
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
 
-#### Titel eerste bevinding
-Hier korte omschrijving (met indien nodig een afbeelding)
+#### Zicht.
+Bril 1: Combined eyeloss, Diabetic eye disease.
+Goed te doen, want de tekst is groot. Maar op de 2e pagina bij de witte tekst moet je iets meer moeite doen, en op p1 dunne zwarte tekst op beige. Achtergrond bij witte tekst kan donkerder, een schaduw achter de tekst of de tekst zwart maken.
+
+Bril 2: blur/glare.
+Alleen de aller grootste titels zijn te lezen, vanaf ongeveer 30px begint de tekst leesbaar te worden.
+
+Bril 3: central field loss.
+Als de tekst op het midden van het scherm staat is het niet leesbaar door de vlek heen. Je moet echt langs de vlek heenlezen. Omdat veel tekst left aligned is kan je nog wel een beetje lezen wat er staat,
+dus dat helpt best wel.
+
+Bril 4: peripheral screen loss.
+De kleine tekst is slechter leesbaar, de grote tekst is okay en de pagina structuur is duidelijk door de achtergrondkleuren (duidelijke opdeling in sections en articles) maar het kost wel veel moeite om te lezen.
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
 
+#### Screenreader. 
+De screenreader slaat sommige onderdelen van de site over. vooral op de 2e pagina. Er wordt niet aangegeven dat je het hamburger menu ingaat. Het zou sowieso fijn zijn om de optie te hebben om dit over te slaan en meteen naar de content te gaan. Niet alle kopjes worden voorgelezen en niet alle afbeeldingen worden opgenoemd, ook als ze wel een alt tekst hebben. Wel worden de linkjes goed voorgelezen.
 
-#### Titel tweede bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
-
-Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
-
-
-#### Titel volgende bevinding. 
-Hier korte omschrijving (met indien nodig een afbeelding)
+Op de officiele website van het centraal museum worden wel alle kopjes goed voorgelezen. Wat ook anders is dan bij mijn site is dat het menu pas onderaan de pagina wordt geselecteerd. De inhoudt wordt ook niet automatische voorgelezen, maar je opent het door op enter te drukken.
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Je moet het menu kunnen openen met bijvoorbeeld enter. En alle kopjes moeten geselecteerd worden.
 
-
-#### Titel nog een bevinding. 
+#### Keyboard users. 
 Hier korte omschrijving (met indien nodig een afbeelding)
+Ik heb nog geen states zoals focus state voor toetsenbord gebruikers. Je kan op alle links en knoppen tabben. Andere elementen worden wel soms overgeslagen zoals sommige tekst en het hamburger menu. Je moet het hamburger menu wel kunnen selecteren anders kan je het nooit openen als je alleen je keyboard gebruikt.
 
 Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Ik moet focus states toevoegen. En het menu moet selecteerdbaar en openbaar zijn.
+
+
+#### Motoriek. 
+Met een elastiek om je hand (minder motoriek in je hand) gaat het nog wel goed op de site. Dat komt denk ik vooral doordat al mijn knoppen groot zijn, hierdoor zijn ze makkelijk te drukken. In de footer zijn de linkjes iets kleiner dus daar heb ik al meer moeite mee om ze goed te selecteren.
+
+Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbeelding)
+Alle knoppen en linkjes lekker groot zodat het makkelijk is om erop te klikken. Je kan ook meer ruimte tussen de linkjes zetten zodat je niet per ongeluk op de verkeerde klikt.
 
 </details>
-
-
-
 
 
 ## Voortgang 3 (week 4)
@@ -159,18 +171,23 @@ Hier een omschrijving van hoe het opgelost kan worden (met indien nodig een afbe
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+Ik heb deze week de tweede pagina gemaakt en de toegankelijksheids test gedaan. Ik wilde een aantal regels schrijven in de css die alleen zouden gelden voor de tweede pagina, daarom heb ik nu de tweede pagina een id gegeven op de body, hiermee selecteer ik de paar elementen die anders moeten dan de homepage. Na de toegankelijkheids testen heb ik het hamburger menu aangepast. Je kon eerst niet de menu button selecteren met toetsenbord en er stond geen focus state op. Ik heb de link met de image erin verandert naar een button met een background-image. Als er gefocust wordt op de menu knop wordt hij groter en verandert de achtergrond van kleur.
 
+~ to do list ~
 
-### Agenda voor meeting
-samen met je groepje opstellen
+low hanging fruit:
+- uitlijning tekst fixen
+- images die je scrollt allemaal zelfde grootte
+- states voor het form maken
+- witte tekst beter leesbaar maken
+- logo link maken naar de homepage
 
-| student 1      | student 2          | student 3    | student 4        |
-| ---            | ---                | ---          | ---              |
-| dit bespreken  | en dit             | en ik dit    | en dan ik dat    |
-| en dat ook nog | dit als er tijd is | nog een punt | dit wil ik zeker |
-| ...            | ...                | ...          | ...              |
-
+wat meer moeite:
+- inhoud van de nav afmaken
+- scroll tekst code schrijven
+- alle headers keyboard selectable maken
+- terug naar boven knop maken
+- met media queries pagina okay laten uitzien op ipad en desktop formaat
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
