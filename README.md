@@ -171,23 +171,19 @@ Alle knoppen en linkjes lekker groot zodat het makkelijk is om erop te klikken. 
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-Ik heb deze week de tweede pagina gemaakt en de toegankelijksheids test gedaan. Ik wilde een aantal regels schrijven in de css die alleen zouden gelden voor de tweede pagina, daarom heb ik nu de tweede pagina een id gegeven op de body, hiermee selecteer ik de paar elementen die anders moeten dan de homepage. Na de toegankelijkheids testen heb ik het hamburger menu aangepast. Je kon eerst niet de menu button selecteren met toetsenbord en er stond geen focus state op. Ik heb de link met de image erin verandert naar een button met een background-image. Als er gefocust wordt op de menu knop wordt hij groter en verandert de achtergrond van kleur.
+Ik heb deze week de tweede pagina gemaakt en de toegankelijksheids test gedaan. Ik wilde een aantal regels schrijven in de css die alleen zouden gelden voor de tweede pagina, daarom heb ik nu de tweede pagina een id gegeven op de body, hiermee selecteer ik de paar elementen die anders moeten dan de homepage. Na de toegankelijkheids testen heb ik het hamburger menu aangepast. Je kon eerst niet de menu button selecteren met toetsenbord en er stond geen focus state op. Ik heb de link met de image erin verandert naar een button met een background-image. Als er gefocust wordt op de menu knop wordt hij groter en verandert de achtergrond van kleur. Nu nog states maken voor de rest van de links op de site.
 
 ~ to do list ~
+toegankelijkheid verbeteren:
+- states voor het form
+- states voor de "Lees meer" links
+- witte tekst beter leesbaar
+- alle headers en links keyboard selectable maken
 
-low hanging fruit:
-- uitlijning tekst fixen
-- images die je scrollt allemaal zelfde grootte
-- states voor het form maken
-- witte tekst beter leesbaar maken
-- logo link maken naar de homepage
-
-wat meer moeite:
-- inhoud van de nav afmaken
-- scroll tekst code schrijven
-- alle headers keyboard selectable maken
-- terug naar boven knop maken
-- met media queries pagina okay laten uitzien op ipad en desktop formaat
+site afmaken:
+- terug naar boven knop
+- scroll tekst pagina 2
+- media queries voor ipad en desktop formaat
 
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen

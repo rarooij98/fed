@@ -16,37 +16,35 @@
 /* ALGEMEEN */
 
 h1 {
-  color: black;
-  font-weight: bold;
-  font-size: 2em;
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 1.8em;
   text-decoration: none;
   text-align: center;
-  margin: 1em 2em;
+  padding-top: 1em;
 }
 
 h2 {
-  color: black;
+  color: rgb(0, 0, 0);
   font-weight: 700;
-  font-size: 1.75em;
+  font-size: 1.6em;
   margin-left: .5em;
 }
 
 h3 {
-  color: black;
+  color: rgb(0, 0, 0);
   text-align: center;
   padding-top: 1em;
-  margin: 0;
 }
 
 h4 {
-  color: crimson;
+  color: rgb(207, 24, 24);
   text-align: center;
 }
 
 h5 {
   text-transform: uppercase;
   text-align: center;
-  margin: 0;
   padding-top: 2em;
 }
 
@@ -56,6 +54,7 @@ p {
 
 a {
   text-decoration: none;
+  color: rgb(0, 0, 0);
 }
 
 form {
@@ -68,21 +67,15 @@ form input {
   padding: 1em;
 }
 
-ul,
-li,
-figure {
-  margin: 0;
-  padding: 0;
-}
-
 figure img {
-  max-height: 20em;
+  max-height: 30em;
   max-width: 20em;
 }
 
 figcaption p {
   text-transform: lowercase;
   width: 20em;
+  text-align: center;
 }
 
 /* HEADER */
@@ -104,20 +97,22 @@ iframe {
   position: relative;
   top: 0;
   width: 100vw;
-  pointer-events: none;
+  height: 300px;
+  border: none;
+  pointer-events: none; /*was nodig omdat anders de menu button niet klikbaar was*/
 }
 
 header button {
   /*hamburger menu*/
   z-index: 999;
   position: fixed;
-  left: 18em;
-  width: 4em;
-  height: 4em;
   top: 4em;
+  left: 18em;
+  width: 3.5em;
+  height: 3.5em;
   padding: 1em;
   border-radius: 2em;
-  background-color: rgb(255, 255, 255);
+  background-color: var(--hoofd-kleur);
   background-image: url("../images/hamburger.png");
   background-repeat: no-repeat;
   background-size: 2em;
@@ -126,18 +121,18 @@ header button {
 }
 
 header button:focus {
-  transform: scale(120%);
+  transform: scale(1.1);
   background-color: var(--accent-kleur);
 }
 
 header a {
   /*ontdek meer link*/
   position: absolute;
-  left: 6em;
   top: 10em;
+  left: 5em;
   padding: .75em;
-  border: 2px solid white;
-  color: white;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   font-weight: 800;
   text-transform: uppercase;
   text-decoration: none;
@@ -171,13 +166,17 @@ header ul li a:first-of-type {
   text-transform: none;
 }
 
+header nav ul li a:first-of-type {
+  text-decoration: none;
+}
+
 /* NAV */
 
 nav {
-  position: fixed;
   overflow: scroll;
+  position: fixed;
   top: 0;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
   transform: translateX(100%);
@@ -190,7 +189,6 @@ button {
 }
 
 nav.open {
-  display: relative;
   transform: translateX(0%);
   /* schuift de navigatie terug in beeld */
 }
@@ -203,8 +201,17 @@ nav ul {
   padding: 1em;
 }
 
-nav ul li a {
-  text-decoration: none;
+nav img {
+  position: static;
+  display: block;
+  margin: auto;
+  width: 75%;
+  padding: 2em 0em 2em 0em;
+}
+
+nav h2 {
+  font-size: 1.5em;
+  margin-left: 1.3em;
 }
 
 /* ARTICLE & SECTION */
@@ -220,22 +227,16 @@ section {
   width: 100vw;
 }
 
-article img,
-figure img {
+article img, figure img {
   width: 90%;
   margin: 1em 1em;
-}
-
-section a {
-  margin: 1em;
 }
 
 article a:nth-of-type(3) {
   /*meer info button*/
   margin: 1em;
   padding: 1em;
-  border: .5px solid black;
-  color: black;
+  border: .5px solid rgb(0, 0, 0);
   width: 30%;
 }
 
@@ -246,6 +247,7 @@ section:first-of-type {
 section:first-of-type ul {
   /* scroll door de images heen */
   display: flex;
+  align-items: baseline;
   overflow: scroll;
   list-style: none;
 }
@@ -254,19 +256,12 @@ section:nth-of-type(2) {
   background-color: var(--accent-kleur);
 }
 
-article:nth-of-type(2) img {
-  width: 100vw;
-  margin: 2em 0em 2em 0em;
-}
-
 section:nth-of-type(2) article:nth-of-type(2) a:nth-of-type(2) {
   /*meer info button*/
   margin: 1em;
   padding: 1em;
-  border: .5px solid black;
-  color: black;
+  border: .5px solid rgb(0, 0, 0);
   width: 30%;
-  font-weight: bold;
 }
 
 section:nth-of-type(3) {
@@ -276,23 +271,11 @@ section:nth-of-type(3) {
 section:nth-of-type(3) a {
   /*privacy statement link*/
   text-decoration: underline;
-  color: black;
   margin: 1em;
 }
 
 section:nth-of-type(4) {
   background-color: var(--accent-kleur);
-}
-
-section:nth-of-type(5) a:nth-of-type(3) {
-  /* Meer... button */
-  margin: 1em;
-  margin-right: 30em;
-  padding: 1em;
-  border: .5px solid black;
-  color: black;
-  width: 30%;
-  font-weight: bold;
 }
 
 section:nth-of-type(5) {
@@ -307,6 +290,7 @@ section:nth-of-type(5) ul {
   /* social media icons */
   display: flex;
   flex-direction: row;
+  list-style: none;
 }
 
 section:nth-of-type(5) img {
@@ -317,14 +301,18 @@ section:nth-of-type(5) img {
   margin: 1em;
 }
 
-section:nth-of-type(5) ul {
-  list-style: none;
-  display: flex;
-}
-
 section:nth-of-type(5) ul img {
   max-width: 2em;
   max-height: 2em;
+  border-radius: 0em;
+}
+
+section:nth-of-type(5) a:nth-of-type(3) {
+  /* Meer... button */
+  width: 35%;
+  margin: 1em 10em 1em 1em;
+  padding: 1em;
+  border: .5px solid rgb(0, 0, 0);
 }
 
 /* FOOTER */
@@ -334,23 +322,19 @@ footer {
 }
 
 footer img {
-  width: 85%;
-  margin: auto;
-  margin-top: 2em;
   display: block;
+  margin: auto;
+  width: 85%;
+  padding-top: 2em;
 }
 
-footer h5,
-footer p,
-footer a,
-address {
+footer h5, footer p, footer a, address {
   margin-left: 1em;
   text-align: start;
 }
 
 footer a {
   text-decoration: underline;
-  color: black;
 }
 
 footer h5 {
@@ -358,6 +342,7 @@ footer h5 {
 }
 
 footer ul {
+  /* social media icons */
   list-style: none;
   display: flex;
 }
@@ -376,7 +361,6 @@ footer ul li:first-of-type {
 /* EXTRA STYLING VOOR ONTDEK.HTML */
 /**********************************/
 
-/* HEADER ONTDEK.HTML */
 #ontdek header {
   position: relative;
   overflow: hidden;
@@ -385,40 +369,47 @@ footer ul li:first-of-type {
 
 #ontdek header h1 {
   position: relative;
-  top: -3em;
-  width: 10em;
   margin: auto;
+  top: -4em;
+  width: 10em;
   color: rgb(255, 255, 255);
 }
 
 #ontdek header img {
-  /* tuin foto */
   position: static;
   width: 100vw;
   top: 0;
-  left: 0;
   right: 0;
+  left: 0;
 }
 
 #ontdek header img:nth-of-type(2) {
   /* logo */
-  width: 50%;
   position: absolute;
-  left: -5em;
   top: 2em;
+  left: -5em;
+  width: 50%;
 }
 
 #ontdek header button {
   /*hamburger menu*/
   position: fixed;
-  left: 18em;
-  width: 4em;
   top: 4em;
+  left: 18em;
+  width: 3.5em;
+  height: 3.5em;
   padding: 1em;
   border: none;
 }
 
-/* ALGEMEEN ONTDEK.HTML */
+#ontdek nav img {
+  width: 75%;
+}
+
+#ontdek nav h2 {
+  text-align: left;
+  padding: 0;
+}
 
 #ontdek h2 {
   text-align: center;
@@ -430,8 +421,7 @@ footer ul li:first-of-type {
   margin-left: 1em;
 }
 
-#ontdek section,
-#ontdek article {
+#ontdek section, #ontdek article {
   background-color: rgb(255, 255, 255);
 }
 
@@ -471,6 +461,11 @@ footer ul li:first-of-type {
   display: block;
   width: 12em;
   text-align: center;
+}
+
+#ontdek article:nth-of-type(2) img {
+  width: 100vw;
+  margin: 2em 0em 2em 0em;
 }
 
 #ontdek main ul {
