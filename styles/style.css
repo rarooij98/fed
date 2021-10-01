@@ -166,6 +166,10 @@ header ul li a:first-of-type {
   text-transform: none;
 }
 
+header ul li a:first-of-type:focus {
+  background-color: var(--accent-kleur);
+}
+
 header nav ul li a:first-of-type {
   text-decoration: none;
 }
