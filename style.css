@@ -1,0 +1,487 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  font-family: 'Libre Franklin', sans-serif;
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+}
+
+:root {
+  --hoofd-kleur: rgb(250, 248, 239);
+  --accent-kleur: rgb(225, 236, 244);
+}
+
+/* ALGEMEEN */
+
+h1 {
+  color: rgb(0, 0, 0);
+  font-weight: 900;
+  font-size: 1.8em;
+  text-decoration: none;
+  text-align: center;
+  padding-top: 1em;
+}
+
+h2 {
+  color: rgb(0, 0, 0);
+  font-weight: 700;
+  font-size: 1.6em;
+  margin-left: .5em;
+}
+
+h3 {
+  color: rgb(0, 0, 0);
+  text-align: center;
+  padding-top: 1em;
+}
+
+h4 {
+  color: rgb(207, 24, 24);
+  text-align: center;
+}
+
+h5 {
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 2em;
+}
+
+p {
+  margin: 1em;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 0, 0);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+}
+
+form input {
+  padding: 1em;
+}
+
+figure img {
+  max-height: 30em;
+  max-width: 20em;
+}
+
+figcaption p {
+  text-transform: lowercase;
+  width: 20em;
+  text-align: center;
+}
+
+/* HEADER */
+
+header {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(250, 248, 239);
+}
+
+header img {
+  width: 50%;
+  position: absolute;
+  left: -5em;
+  top: 2em;
+}
+
+iframe {
+  position: relative;
+  top: 0;
+  width: 100vw;
+  height: 300px;
+  border: none;
+  pointer-events: none; /*was nodig omdat anders de menu button niet klikbaar was*/
+}
+
+header button {
+  /*hamburger menu*/
+  z-index: 999;
+  position: fixed;
+  top: 4em;
+  left: 18em;
+  width: 3.5em;
+  height: 3.5em;
+  padding: 1em;
+  border-radius: 2em;
+  background-color: var(--hoofd-kleur);
+  background-image: url("../images/hamburger.png");
+  background-repeat: no-repeat;
+  background-size: 2em;
+  background-position: center;
+  color: rgb(0, 0, 0);
+}
+
+header button:focus {
+  transform: scale(1.1);
+  background-color: var(--accent-kleur);
+}
+
+header a {
+  /*ontdek meer link*/
+  position: absolute;
+  top: 10em;
+  left: 5em;
+  padding: .75em;
+  border: 2px solid rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
+  font-weight: 800;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+header a:focus,
+header a:active {
+  background-color: rgb(34, 34, 34);
+  border: none;
+}
+
+header ul {
+  list-style: none;
+  padding: 2em 2em;
+}
+
+header ul li {
+  margin: 1em;
+}
+
+header ul li a:first-of-type {
+  color: rgb(49, 49, 49);
+  font-size: 1.2em;
+  text-decoration: underline;
+
+  /* resetten van de styling geerfd van header a */
+  position: static;
+  padding: 0;
+  border: none;
+  font-weight: normal;
+  text-transform: none;
+}
+
+header nav ul li a:first-of-type {
+  text-decoration: none;
+}
+
+header nav ul li a:first-of-type:focus {
+  background-color: var(--accent-kleur);
+}
+
+/* NAV */
+
+nav {
+  overflow: scroll;
+  position: fixed;
+  top: 0;
+  background-color: rgb(255, 255, 255);
+  width: 100vw;
+  height: 100vh;
+  transform: translateX(100%);
+  /* schuift de navigatie uit beeld */
+  transition: 2s;
+}
+
+button {
+  transition: .5s;
+}
+
+nav.open {
+  transform: translateX(0%);
+  /* schuift de navigatie terug in beeld */
+}
+
+button.open {
+  background-image: url("../images/pijl.png");
+}
+
+nav ul {
+  padding: 1em;
+}
+
+nav img {
+  position: static;
+  display: block;
+  margin: auto;
+  width: 75%;
+  padding: 2em 0em 2em 0em;
+}
+
+nav h2 {
+  font-size: 1.5em;
+  margin-left: 1.3em;
+}
+
+/* ARTICLE & SECTION */
+
+article {
+  background-color: var(--accent-kleur);
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+}
+
+section {
+  width: 100vw;
+}
+
+article img, figure img {
+  width: 90%;
+  margin: 1em 1em;
+}
+
+article a:nth-of-type(3) {
+  /*meer info button*/
+  margin: 1em;
+  padding: 1em;
+  border: .5px solid rgb(0, 0, 0);
+  width: 30%;
+}
+
+section:first-of-type {
+  background-color: var(--hoofd-kleur);
+}
+
+section:first-of-type ul {
+  /* scroll door de images heen */
+  display: flex;
+  align-items: baseline;
+  overflow: scroll;
+  list-style: none;
+}
+
+section:nth-of-type(2) {
+  background-color: var(--accent-kleur);
+}
+
+section:nth-of-type(2) article:nth-of-type(2) a:nth-of-type(2) {
+  /*meer info button*/
+  margin: 1em;
+  padding: 1em;
+  border: .5px solid rgb(0, 0, 0);
+  width: 30%;
+}
+
+section:nth-of-type(3) {
+  background-color: var(--hoofd-kleur);
+}
+
+section:nth-of-type(3) a {
+  /*privacy statement link*/
+  text-decoration: underline;
+  margin: 1em;
+}
+
+section:nth-of-type(4) {
+  background-color: var(--accent-kleur);
+}
+
+section:nth-of-type(5) {
+  background-color: var(--accent-kleur);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+section:nth-of-type(5) ul {
+  /* social media icons */
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+
+section:nth-of-type(5) img {
+  /* foto van auteur */
+  height: 6em;
+  width: 6em;
+  border-radius: 4em;
+  margin: 1em;
+}
+
+section:nth-of-type(5) ul img {
+  max-width: 2em;
+  max-height: 2em;
+  border-radius: 0em;
+}
+
+section:nth-of-type(5) a:nth-of-type(3) {
+  /* Meer... button */
+  width: 35%;
+  margin: 1em 10em 1em 1em;
+  padding: 1em;
+  border: .5px solid rgb(0, 0, 0);
+}
+
+/* FOOTER */
+
+footer {
+  background-color: var(--hoofd-kleur);
+}
+
+footer img {
+  display: block;
+  margin: auto;
+  width: 85%;
+  padding-top: 2em;
+}
+
+footer h5, footer p, footer a, address {
+  margin-left: 1em;
+  text-align: start;
+}
+
+footer a {
+  text-decoration: underline;
+}
+
+footer h5 {
+  margin-bottom: 1.5em;
+}
+
+footer ul {
+  /* social media icons */
+  list-style: none;
+  display: flex;
+}
+
+footer ul li a img {
+  /* social media icons */
+  max-width: 2em;
+  margin-bottom: 2em;
+}
+
+footer ul li:first-of-type {
+  margin-left: 1em;
+}
+
+/**********************************/
+/* EXTRA STYLING VOOR ONTDEK.HTML */
+/**********************************/
+
+#ontdek header {
+  position: relative;
+  overflow: hidden;
+  background-color: rgb(255, 255, 255);
+}
+
+#ontdek header h1 {
+  position: relative;
+  margin: auto;
+  top: -4em;
+  width: 10em;
+  color: rgb(255, 255, 255);
+}
+
+#ontdek header img {
+  position: static;
+  width: 100vw;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+#ontdek header img:nth-of-type(2) {
+  /* logo */
+  position: absolute;
+  top: 2em;
+  left: -5em;
+  width: 50%;
+}
+
+#ontdek header button {
+  /*hamburger menu*/
+  position: fixed;
+  top: 4em;
+  left: 18em;
+  width: 3.5em;
+  height: 3.5em;
+  padding: 1em;
+  border: none;
+}
+
+#ontdek nav img {
+  width: 75%;
+}
+
+#ontdek nav h2 {
+  text-align: left;
+  padding: 0;
+}
+
+#ontdek h2 {
+  text-align: center;
+  padding: .5em;
+}
+
+#ontdek article h4 {
+  text-align: left;
+  margin-left: 1em;
+}
+
+#ontdek section, #ontdek article {
+  background-color: rgb(255, 255, 255);
+}
+
+#ontdek section:nth-of-type(3) {
+  background-color: var(--accent-kleur);
+}
+
+#ontdek section p {
+  padding: 1.5em;
+  text-align: center;
+  font-size: 1.2em;
+  line-height: 2em;
+}
+
+#ontdek article:first-of-type p {
+  padding: 1.5em;
+  text-align: left;
+  font-size: 1.5em;
+  color: rgb(255, 255, 255);
+  line-height: 2em;
+}
+
+#ontdek article p:first-of-type {
+  font-size: 1.2em;
+}
+
+#ontdek article:first-of-type {
+  background-image: url("../images/stoelen.jpeg");
+  background-position: center;
+}
+
+#ontdek section:nth-of-type(2) a {
+  border: solid 0.1em rgb(75, 75, 75);
+  padding: 1em;
+  margin: auto;
+  margin-top: 1em;
+  display: block;
+  width: 12em;
+  text-align: center;
+}
+
+#ontdek article:nth-of-type(2) img {
+  width: 100vw;
+  margin: 2em 0em 2em 0em;
+}
+
+#ontdek main ul {
+  /*social media iconen positioneren*/
+  display: flex;
+  list-style: none;
+  justify-content: center;
+  margin: 1em;
+}
+
+#ontdek main ul li a img {
+  /*social media iconen stylen*/
+  max-width: 2em;
+  margin: 1em;
+}
