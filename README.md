@@ -188,10 +188,9 @@ site afmaken:
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- punt 1
-- punt 2
-- nog een punt
-- ...
+- Zet genoeg comments neer, ook meer in de html, zorg voor meer overdraagbaarheid.
+- Je kan met a href="" linken naar de andere pagina van de site (is chill voor iemand door je site heen gaat om te testen).
+- Het is mogelijk om een keyboard event toe te voegen aan je eventlistener om het menu te openen met een bepaalde toets.
 
 </details>
 
