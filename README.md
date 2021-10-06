@@ -171,7 +171,14 @@ Alle knoppen en linkjes lekker groot zodat het makkelijk is om erop te klikken. 
 <summary>uitwerken voor 3e voortgang</summary>
 
 ### Stand van zaken
-Ik heb deze week de tweede pagina gemaakt en de toegankelijksheids test gedaan. Ik wilde een aantal regels schrijven in de css die alleen zouden gelden voor de tweede pagina, daarom heb ik nu de tweede pagina een id gegeven op de body, hiermee selecteer ik de paar elementen die anders moeten dan de homepage. Na de toegankelijkheids testen heb ik het hamburger menu aangepast. Je kon eerst niet de menu button selecteren met toetsenbord en er stond geen focus state op. Ik heb de link met de image erin verandert naar een button met een background-image. Als er gefocust wordt op de menu knop wordt hij groter en verandert de achtergrond van kleur. Nu nog states maken voor de rest van de links op de site.
+Ik heb deze week de tweede pagina gemaakt en de toegankelijksheids test gedaan. Ik wilde een aantal regels schrijven in de css die alleen zouden gelden voor de tweede pagina, daarom heb ik nu de tweede pagina een id gegeven op de body, hiermee selecteer ik de paar elementen die anders moeten dan de homepage. Na de toegankelijkheids testen heb ik het hamburger menu aangepast. Je kon eerst niet de menu button selecteren met toetsenbord en er stond geen focus state op. Ik heb de link met de image erin verandert naar een button met een background-image. Als er gefocust wordt op de menu knop wordt hij groter en verandert de achtergrond van kleur. Nu moet ik nog states maken voor de rest van de links op de site, en de site responsive maken met media queries.
+
+### Verslag van meeting
+hier na afloop snel de uitkomsten van de meeting vastleggen
+
+- Zet genoeg comments neer, ook meer in de html, zorg voor meer overdraagbaarheid.
+- Je kan met a href="" linken naar de andere pagina van de site (is chill voor iemand door je site heen gaat om te testen).
+- Het is mogelijk om een keyboard event toe te voegen aan je eventlistener om het menu te openen met een bepaalde toets.
 
 ~ to do list ~
 toegankelijkheid verbeteren:
@@ -183,14 +190,8 @@ toegankelijkheid verbeteren:
 site afmaken:
 - terug naar boven knop
 - scroll tekst pagina 2
-- media queries voor ipad en desktop formaat
-
-### Verslag van meeting
-hier na afloop snel de uitkomsten van de meeting vastleggen
-
-- Zet genoeg comments neer, ook meer in de html, zorg voor meer overdraagbaarheid.
-- Je kan met a href="" linken naar de andere pagina van de site (is chill voor iemand door je site heen gaat om te testen).
-- Het is mogelijk om een keyboard event toe te voegen aan je eventlistener om het menu te openen met een bepaalde toets.
+- responsive media queries
+- goede comments plaatsen
 
 </details>
 
@@ -205,6 +206,10 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
+
+Wat goed ging was het gebruiken van semantische html en selectors en het vermijden van divs, classes en id's. Ik vond het soms moeilijk om overzicht te houden in de code, het zou helpen als ik eerder was begonnen met het schrijven van goede comments.
+Ik had eerst ook veel moeite met het responsive maken van de website, want ik wilde een aantal articles naast elkaar laten komen en anders indelen, ik heb uiteindelijk grid hiervoor gebruikt in plaats van flexbox waarmee ik het eerst had gedaan. Met grid kon ik de afbeelding en tekst mooi naast elkaar zetten zonder een extra div te gebruiken.
+Het had wel wat makkelijker geweest als ik in het begin al had geweten hoe ik de site responsive ging maken, want aan het einde moest ik code gaan herschrijven om het te laten werken.
 
 ### Screenshot(s)
 
@@ -230,5 +235,6 @@ Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 4. Font Awesome. Facebook, Twitter, Mail, Youtube en Instagram icoon. (url: https://fontawesome.com/v5.15/icons/twitter?style=brands)
 5. CSS-Tricks. CSS-Only Carousel. Door Chris Coyier, 10 jan 2020. (url: https://css-tricks.com/css-only-carousel)
 6. Social media icons gedownload van flaticon.com en gecreerd door Pixel Perfect. (url: https://www.flaticon.com)
+7. Wes Bos - Grid.
 
 </details>

@@ -9,11 +9,18 @@
 }
 
 :root {
-  --hoofd-kleur: rgb(250, 248, 239);
-  --accent-kleur: rgb(225, 236, 244);
+  --hoofd-kleur: rgb(250, 248, 239); /*beige*/
+  --accent-kleur: rgb(225, 236, 244); /*blauw*/
 }
 
 /* ALGEMEEN */
+
+main {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap; /*voor responsive*/
+  overflow: hidden; /*verbergt menu uit beeld*/
+}
 
 h1 {
   color: rgb(0, 0, 0);
@@ -61,6 +68,8 @@ form {
   display: flex;
   flex-direction: column;
   padding: 1em;
+  width: 80%;
+  margin: auto;
 }
 
 form input {
@@ -82,54 +91,58 @@ figcaption p {
 
 header {
   position: relative;
-  overflow: hidden;
   background-color: rgb(250, 248, 239);
 }
 
 header img {
-  width: 50%;
+  width: 14em;
   position: absolute;
   left: -5em;
-  top: 2em;
+  top: 2%;
 }
 
-iframe {
+div { /*hierin staat de iframe video*/
   position: relative;
   top: 0;
   width: 100vw;
-  height: 300px;
-  border: none;
-  pointer-events: none; /*was nodig omdat anders de menu button niet klikbaar was*/
+  height: 200px;
 }
 
-header button {
-  /*hamburger menu*/
-  z-index: 999;
-  position: fixed;
-  top: 4em;
-  left: 18em;
+iframe {
+  pointer-events: none; /*omdat anders de menu button niet klikbaar is*/
+  width: 100%; /*iframe vult de volledige breedte van de div*/
+  height: 110%;
+}
+
+header button { /*hamburger menu button*/
+  z-index: 999; /*het menu moet altijd bovenop blijven staan*/
+  position: fixed; /*menu moet meescrollen over de hele pagina*/
+  top: 2em;
   width: 3.5em;
   height: 3.5em;
   padding: 1em;
+  margin-left: 80%;
   border-radius: 2em;
   background-color: var(--hoofd-kleur);
   background-image: url("../images/hamburger.png");
   background-repeat: no-repeat;
   background-size: 2em;
-  background-position: center;
-  color: rgb(0, 0, 0);
+  background-position: center; /*shorthand schrijven voor background?*/
 }
 
-header button:focus {
+header button:focus { 
   transform: scale(1.1);
   background-color: var(--accent-kleur);
 }
 
 header a {
-  /*ontdek meer link*/
-  position: absolute;
-  top: 10em;
-  left: 5em;
+  /* "Ontdek meer" link*/
+  position: relative;
+  top: -4em; /*over de iframe video heen zetten*/
+  width: fit-content;
+  margin: auto;
+  display: block;
+
   padding: .75em;
   border: 2px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
@@ -144,7 +157,7 @@ header a:active {
   border: none;
 }
 
-header ul {
+header ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
   list-style: none;
   padding: 2em 2em;
 }
@@ -153,25 +166,26 @@ header ul li {
   margin: 1em;
 }
 
-header ul li a:first-of-type {
+header ul li a {
   color: rgb(49, 49, 49);
   font-size: 1.2em;
   text-decoration: underline;
 
-  /* resetten van de styling geerfd van header a */
+  /*resetten van de styling geerfd van header a*/
   position: static;
   padding: 0;
+  margin: 0;
   border: none;
   font-weight: normal;
   text-transform: none;
 }
 
-header ul li a:first-of-type:focus {
+header ul li a:focus {
   background-color: var(--accent-kleur);
 }
 
 header nav ul li a:first-of-type {
-  text-decoration: none;
+  text-decoration: none; /*de linkjes in het hamburger menu krijgen geen underline*/
 }
 
 /* NAV */
@@ -183,8 +197,7 @@ nav {
   background-color: rgb(255, 255, 255);
   width: 100vw;
   height: 100vh;
-  transform: translateX(100%);
-  /* schuift de navigatie uit beeld */
+  transform: translateX(100%); /*schuift het menu uit beeld tot het geopend wordt*/
   transition: 2s;
 }
 
@@ -193,11 +206,10 @@ button {
 }
 
 nav.open {
-  transform: translateX(0%);
-  /* schuift de navigatie terug in beeld */
+  transform: translateX(0%); /*schuift het menu in beeld wanneer het geopend wordt*/
 }
 
-button.open {
+button.open { /*als er op de menu knop gedrukt wordt verandert zijn background image*/
   background-image: url("../images/pijl.png");
 }
 
@@ -205,9 +217,9 @@ nav ul {
   padding: 1em;
 }
 
-nav img {
-  position: static;
-  display: block;
+nav img { /*logo*/
+  position: static; /*overschrijven van position:absolute geerfd van header img*/
+  display: block; /*om te centreren*/
   margin: auto;
   width: 75%;
   padding: 2em 0em 2em 0em;
@@ -232,48 +244,37 @@ section {
 }
 
 article img, figure img {
-  width: 90%;
+  width: 70%;
   margin: 1em 1em;
 }
 
-article a:nth-of-type(3) {
-  /*meer info button*/
+article a:nth-of-type(3) { /* "Meer info" button*/
   margin: 1em;
   padding: 1em;
   border: .5px solid rgb(0, 0, 0);
-  width: 30%;
+  width: 40%;
 }
 
 section:first-of-type {
   background-color: var(--hoofd-kleur);
 }
 
-section:first-of-type ul {
-  /* scroll door de images heen */
-  display: flex;
-  align-items: baseline;
-  overflow: scroll;
+section:first-of-type ul { /*de horizontale lijst met images waar je doorheen scrollt*/
+  display: flex; /*plaatst de list items in een row waardoor de lijst horizontaal wordt geplaatst*/
+  overflow: scroll; /*maakt de lijst scrollable*/
   list-style: none;
+  align-items: baseline;
 }
 
-section:nth-of-type(2) {
+section:nth-of-type(2) { /*sections hebben afwisselende achtergrond kleuren, sommige blauw andere beige*/
   background-color: var(--accent-kleur);
-}
-
-section:nth-of-type(2) article:nth-of-type(2) a:nth-of-type(2) {
-  /*meer info button*/
-  margin: 1em;
-  padding: 1em;
-  border: .5px solid rgb(0, 0, 0);
-  width: 30%;
 }
 
 section:nth-of-type(3) {
   background-color: var(--hoofd-kleur);
 }
 
-section:nth-of-type(3) a {
-  /*privacy statement link*/
+section:nth-of-type(3) a { /*privacy statement link*/
   text-decoration: underline;
   margin: 1em;
 }
@@ -284,39 +285,31 @@ section:nth-of-type(4) {
 
 section:nth-of-type(5) {
   background-color: var(--accent-kleur);
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  align-items: center;
 }
 
-section:nth-of-type(5) ul {
-  /* social media icons */
-  display: flex;
-  flex-direction: row;
+section:nth-of-type(5) ul { /*social media iconen*/
+  display: flex; /*flexbox om de iconen in een rij te zetten*/
+  justify-content: center; /*iconen centreren*/
   list-style: none;
+  padding: 1em;
 }
 
-section:nth-of-type(5) img {
-  /* foto van auteur */
-  height: 6em;
-  width: 6em;
-  border-radius: 4em;
-  margin: 1em;
-}
-
-section:nth-of-type(5) ul img {
+section:nth-of-type(5) ul img { /*social media iconen kleiner maken*/
   max-width: 2em;
   max-height: 2em;
-  border-radius: 0em;
 }
 
-section:nth-of-type(5) a:nth-of-type(3) {
-  /* Meer... button */
+section:nth-of-type(5) a { /* "Meer..." button border geven*/
   width: 35%;
+  display: block;
   margin: 1em 10em 1em 1em;
   padding: 1em;
   border: .5px solid rgb(0, 0, 0);
+}
+
+section:nth-of-type(5) ul li a { /*border weghalen bij de social media iconen*/
+  border: none;
+  margin: 1em 1em;
 }
 
 /* FOOTER */
@@ -325,14 +318,13 @@ footer {
   background-color: var(--hoofd-kleur);
 }
 
-footer img {
-  display: block;
-  margin: auto;
-  width: 85%;
+footer img { /*logo*/
+  margin: 0em auto 1em 1em;
+  max-width: 250px;
   padding-top: 2em;
 }
 
-footer h5, footer p, footer a, address {
+footer h5, footer p, footer a, address { /*alle tekst in de footer hetzelfde alignen*/
   margin-left: 1em;
   text-align: start;
 }
@@ -345,20 +337,18 @@ footer h5 {
   margin-bottom: 1.5em;
 }
 
-footer ul {
-  /* social media icons */
+footer ul { /*social media iconen*/
+  display: flex; /*flexbox om de iconen in een rij te zetten*/
   list-style: none;
-  display: flex;
 }
 
-footer ul li a img {
-  /* social media icons */
+footer ul li a img { /*social media iconen*/
   max-width: 2em;
   margin-bottom: 2em;
 }
 
-footer ul li:first-of-type {
-  margin-left: 1em;
+footer ul li:first-of-type { /*eerste icoon*/
+  margin-left: 1em; /*schuift de rij iconen naar rechts*/
 }
 
 /**********************************/
@@ -377,6 +367,7 @@ footer ul li:first-of-type {
   top: -4em;
   width: 10em;
   color: rgb(255, 255, 255);
+  font-size: 7vw; /*de lettergroote schaalt mee met de schermgroote*/
 }
 
 #ontdek header img {
@@ -387,19 +378,17 @@ footer ul li:first-of-type {
   left: 0;
 }
 
-#ontdek header img:nth-of-type(2) {
-  /* logo */
+#ontdek header img:nth-of-type(2) { /*logo*/
   position: absolute;
   top: 2em;
   left: -5em;
   width: 50%;
 }
 
-#ontdek header button {
-  /*hamburger menu*/
+#ontdek header button { /*hamburger menu*/
   position: fixed;
   top: 4em;
-  left: 18em;
+  /*left: 18em;*/ /*is afhankelijk van iframe*/
   width: 3.5em;
   height: 3.5em;
   padding: 1em;
@@ -472,16 +461,77 @@ footer ul li:first-of-type {
   margin: 2em 0em 2em 0em;
 }
 
-#ontdek main ul {
-  /*social media iconen positioneren*/
+#ontdek main ul { /*social media iconen positioneren*/
   display: flex;
   list-style: none;
   justify-content: center;
   margin: 1em;
 }
 
-#ontdek main ul li a img {
-  /*social media iconen stylen*/
+#ontdek main ul li a img { /*social media iconen stylen*/
   max-width: 2em;
   margin: 1em;
 }
+
+/**************/
+/* RESPONSIVE */
+/**************/
+
+/*Ik heb de site uitgewerkt voor 3 device grootes: mobiel(375x643), tablet(768x643) en desktop(1024x857)*/
+
+@media screen and (min-width: 768px) { /*vanaf tablet formaat*/
+  /*op tablet formaat komen sommige elementen naast elkaar te staan in plaats van onder elkaar*/
+
+  div { /*hierin staat de iframe video*/
+    height: 375px; /*de div wordt geresized zodat de video er goed uitziet*/
+  }
+
+  article{
+    width: 50vw; /*hierdoor kunnen er 2 articles naast elkaar staan*/
+  }
+
+  section article{
+    width: 45vw; /*hierdoor kunnen er 2 articles naast elkaar staan*/
+    display: inline-grid; /*zonder dit werd de article naar de volgende pagina geduwd*/
+  }
+
+  section:nth-of-type(5) a{
+    margin-left: 40%; /* "Meer..." button centeren*/
+    width: 20%;
+  }
+
+}
+
+@media screen and (min-width: 1024px) { /*vanaf desktop formaat*/
+  /*op desktop formaat komen sommige elementen weer onder elkaar te staan, anderen blijven naast elkaar*/
+  /*en in sommige articles staat de tekst links of rechts van de afbeelding in plaats van er onder*/
+
+  div { /*hierin staat de iframe video*/
+    height: 500px;
+  }
+
+  article{
+    width: 100vw; /*hierdoor komen de articles weer onder elkaar te staan*/
+    display: grid; /*grid om de tekst rechts van de afbeelding te zetten*/
+    grid-template-rows: 1fr 1fr 1fr 1fr; /*tekst positioneren*/
+    align-items: center;
+    padding: 2em;
+  }
+
+  section article{ /*zelfde voor de articles die in een section staan*/
+    grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr; /*tekst positioneren*/
+    align-items: start;
+    padding: 2em;
+  }
+
+  article a:first-of-type{
+    grid-row: 1 / -1; /*maakt de img even hoog als de rijen tekst ernaast*/
+  }
+
+  section article img{
+    width: 100%;
+  }
+
+}
+
+
