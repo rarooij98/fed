@@ -207,9 +207,8 @@ site afmaken:
 ### Stand van zaken
 hier dit ging goed & dit was lastig (neem ook screenshots op van delen van je website en code)
 
-Wat goed ging was het gebruiken van semantische html en selectors en het vermijden van divs, classes en id's. Ik vond het soms moeilijk om overzicht te houden in de code, het zou helpen als ik eerder was begonnen met het schrijven van goede comments.
-Ik had eerst ook veel moeite met het responsive maken van de website, want ik wilde een aantal articles naast elkaar laten komen en anders indelen, ik heb uiteindelijk grid hiervoor gebruikt in plaats van flexbox waarmee ik het eerst had gedaan. Met grid kon ik de afbeelding en tekst mooi naast elkaar zetten zonder een extra div te gebruiken.
-Het had wel wat makkelijker geweest als ik in het begin al had geweten hoe ik de site responsive ging maken, want aan het einde moest ik code gaan herschrijven om het te laten werken.
+Wat goed ging was het gebruiken van semantische html en selectors en het vermijden van divs, classes en id's. Ik vond het soms moeilijk om overzicht te houden in de code, het zou helpen als ik eerder was begonnen met het schrijven van comments.
+Ik had eerst ook moeite met het responsive maken van de website. Het was makkelijker geweest als ik in het begin al had geweten hoe ik de site responsive ging maken, want aan het einde moest ik code gaan herschrijven om het te laten werken. Ik wilde bijvoorbeeld articles naast elkaar laten komen ipv eronder, en tekst naast een afbeelding in plaats van eronder. Ik heb uiteindelijk grid hiervoor gebruikt (in plaats van flexbox wat ik eerst probeerde), want met grid kon ik de afbeelding en tekst mooi naast elkaar zetten zonder extra div's te gebruiken. Uiteindelijk heb ik de site uitgewerkt voor 3 device grootes: mobiel(375x643), tablet(768x643) en desktop(1024x857).
 
 ### Screenshot(s)
 
@@ -228,13 +227,12 @@ hier screenshot(s) van je eindresultaat
 
 Nb. Wees specifiek ('css-tricks' als bron is bijv. niet specifiek genoeg).
 
-1. Centraal Museum Utrecht. Alle gebruikte content komt van de site van het museum. (url:https://www.centraalmuseum.nl/nl) Eén van de video's is gelinkt vanuit Vimeo naar de site van het museum: https://player.vimeo.com/video/546015896?dnt=1&loop=1&background=1 
-2. SquareSpace Forum. Scrolling text over a fixed background within a section. Gepost door nsdoyle, 9 juli 2020. 
-(url: https://forum.squarespace.com/topic/165962-scrolling-text-over-a-fixed-background-within-a-section)
-3. CodyHouse. Experiments - HTML, CSS, JS experiments - Full-screen pushing navigation. (url: https://codyhouse.co/gem/full-screen-pushing-navigation)
-4. Font Awesome. Facebook, Twitter, Mail, Youtube en Instagram icoon. (url: https://fontawesome.com/v5.15/icons/twitter?style=brands)
-5. CSS-Tricks. CSS-Only Carousel. Door Chris Coyier, 10 jan 2020. (url: https://css-tricks.com/css-only-carousel)
-6. Social media icons gedownload van flaticon.com en gecreerd door Pixel Perfect. (url: https://www.flaticon.com)
-7. Wes Bos - Grid.
+1. Centraal Museum Utrecht. Alle gebruikte content komt van de site van het museum. (url:https://www.centraalmuseum.nl/nl) Eén van de video's is gelinkt vanuit hun Vimeo naar de site van het museum: https://player.vimeo.com/video/546015896?dnt=1&loop=1&background=1 
+2. Social media icons gedownload van flaticon.com en gecreerd door Pixel Perfect. (url: https://www.flaticon.com)
+3. Wes Bos - CSS Grid (url: https://cssgrid.io).
+4. CodyHouse. Experiments - HTML, CSS, JS experiments - Full-screen pushing navigation (url: https://codyhouse.co/gem/full-screen-pushing-navigation).
+5. Shay Howe - Learn to Code Advances HTML & CSS, Lesson 3: Advanced Selectors (url: https://learn.shayhowe.com/advanced-html-css/complex-selectors).
+6. Sitepoint, Asha Laxmi & Maria Antonietta Perna - CSS Viewpoint Units: A Quick Start (url: https://www.sitepoint.com/css-viewport-units-quick-start).
+7. Michael Scharnagl - The Do's and Dont's of implementing a hamburger menu (url: https://justmarkup.com/articles/2019-12-04-hamburger-menu).
 
 </details>

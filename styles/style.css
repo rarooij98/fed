@@ -47,6 +47,7 @@ h3 {
 h4 {
   color: rgb(207, 24, 24);
   text-align: center;
+  padding-top: 2em;
 }
 
 h5 {
@@ -105,13 +106,14 @@ div { /*hierin staat de iframe video*/
   position: relative;
   top: 0;
   width: 100vw;
-  height: 200px;
+  height: 188px;
 }
 
 iframe {
   pointer-events: none; /*omdat anders de menu button niet klikbaar is*/
   width: 100%; /*iframe vult de volledige breedte van de div*/
   height: 110%;
+  border: none;
 }
 
 header button { /*hamburger menu button*/
@@ -121,7 +123,7 @@ header button { /*hamburger menu button*/
   width: 3.5em;
   height: 3.5em;
   padding: 1em;
-  margin-left: 80%;
+  right: 2em;
   border-radius: 2em;
   background-color: var(--hoofd-kleur);
   background-image: url("../images/hamburger.png");
@@ -135,64 +137,61 @@ header button:focus {
   background-color: var(--accent-kleur);
 }
 
-header a {
+header div a {
   /* "Ontdek meer" link*/
   position: relative;
-  top: -4em; /*over de iframe video heen zetten*/
+  top: -5em; /*over de iframe video heen zetten*/
   width: fit-content;
   margin: auto;
   display: block;
 
   padding: .75em;
-  border: 2px solid rgb(255, 255, 255);
+  border: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
-  font-weight: 800;
+  font-weight: 700;
   text-transform: uppercase;
   text-decoration: none;
 }
 
-header a:focus,
-header a:active {
+header div a:focus,
+header div a:active {
   background-color: rgb(34, 34, 34);
   border: none;
 }
 
-header ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
-  list-style: none;
+header section:first-of-type ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
+  flex-direction: column;
+  overflow: hidden; /*geen scroll*/
   padding: 2em 2em;
 }
 
-header ul li {
+header section ul li {
   margin: 1em;
 }
 
-header ul li a {
+header section ul li a {
   color: rgb(49, 49, 49);
   font-size: 1.2em;
-  text-decoration: underline;
 
-  /*resetten van de styling geerfd van header a*/
-  position: static;
-  padding: 0;
-  margin: 0;
-  border: none;
-  font-weight: normal;
+  /*resetten van styling geerft van header a*/
   text-transform: none;
+  text-decoration: underline;
+  font-weight: 300;
+  border: none;
+  top: 0;
+  padding: 0;
 }
 
-header ul li a:focus {
+header ul li a:focus { 
   background-color: var(--accent-kleur);
-}
-
-header nav ul li a:first-of-type {
-  text-decoration: none; /*de linkjes in het hamburger menu krijgen geen underline*/
 }
 
 /* NAV */
 
 nav {
-  overflow: scroll;
+  overflow: auto;
   position: fixed;
+  z-index: 998;
   top: 0;
   background-color: rgb(255, 255, 255);
   width: 100vw;
@@ -215,14 +214,20 @@ button.open { /*als er op de menu knop gedrukt wordt verandert zijn background i
 
 nav ul {
   padding: 1em;
+  list-style: none;
+}
+
+nav ul li a:first-of-type { /*linkjes in het hamburger menu*/
+  text-decoration: none; /*de linkjes in het hamburger menu krijgen geen underline*/
+  display: block;
+  padding: .75em;
 }
 
 nav img { /*logo*/
   position: static; /*overschrijven van position:absolute geerfd van header img*/
-  display: block; /*om te centreren*/
-  margin: auto;
-  width: 75%;
+  max-width: 250px;
   padding: 2em 0em 2em 0em;
+  margin: 0em auto 1em 1em;
 }
 
 nav h2 {
@@ -230,7 +235,7 @@ nav h2 {
   margin-left: 1.3em;
 }
 
-/* ARTICLE & SECTION */
+/* ARTICLES & SECTIONS */
 
 article {
   background-color: var(--accent-kleur);
@@ -248,6 +253,26 @@ article img, figure img {
   margin: 1em 1em;
 }
 
+section:first-of-type, section:nth-of-type(3) {
+  background-color: var(--hoofd-kleur);
+}
+
+section:nth-of-type(2), section:nth-of-type(4), section:nth-of-type(5) {
+  background-color: var(--accent-kleur);
+}
+
+section:nth-of-type(1) ul { /*de horizontale lijst met images waar je doorheen scrollt*/
+  display: flex; /*plaatst de list items in een row waardoor de lijst horizontaal wordt geplaatst*/
+  overflow: scroll; /*maakt de lijst scrolbaar*/
+  list-style: none;
+  align-items: baseline;
+}
+
+section:nth-of-type(1) ul li img { /*de images in de scroll lijst*/
+  display: block;
+  margin: auto; /*centreert de images boven de tekst*/
+}
+
 article a:nth-of-type(3) { /* "Meer info" button*/
   margin: 1em;
   padding: 1em;
@@ -255,36 +280,9 @@ article a:nth-of-type(3) { /* "Meer info" button*/
   width: 40%;
 }
 
-section:first-of-type {
-  background-color: var(--hoofd-kleur);
-}
-
-section:first-of-type ul { /*de horizontale lijst met images waar je doorheen scrollt*/
-  display: flex; /*plaatst de list items in een row waardoor de lijst horizontaal wordt geplaatst*/
-  overflow: scroll; /*maakt de lijst scrollable*/
-  list-style: none;
-  align-items: baseline;
-}
-
-section:nth-of-type(2) { /*sections hebben afwisselende achtergrond kleuren, sommige blauw andere beige*/
-  background-color: var(--accent-kleur);
-}
-
-section:nth-of-type(3) {
-  background-color: var(--hoofd-kleur);
-}
-
 section:nth-of-type(3) a { /*privacy statement link*/
   text-decoration: underline;
   margin: 1em;
-}
-
-section:nth-of-type(4) {
-  background-color: var(--accent-kleur);
-}
-
-section:nth-of-type(5) {
-  background-color: var(--accent-kleur);
 }
 
 section:nth-of-type(5) ul { /*social media iconen*/
@@ -367,7 +365,7 @@ footer ul li:first-of-type { /*eerste icoon*/
   top: -4em;
   width: 10em;
   color: rgb(255, 255, 255);
-  font-size: 7vw; /*de lettergroote schaalt mee met de schermgroote*/
+  font-size: 6vw; /*de lettergroote schaalt mee met de schermgroote*/
 }
 
 #ontdek header img {
@@ -385,10 +383,10 @@ footer ul li:first-of-type { /*eerste icoon*/
   width: 50%;
 }
 
-#ontdek header button { /*hamburger menu*/
+#ontdek header button { /*hamburger menu button*/
   position: fixed;
-  top: 4em;
-  /*left: 18em;*/ /*is afhankelijk van iframe*/
+  top: 2em;
+  right: 2em;
   width: 3.5em;
   height: 3.5em;
   padding: 1em;
@@ -442,35 +440,41 @@ footer ul li:first-of-type { /*eerste icoon*/
 }
 
 #ontdek article:first-of-type {
-  background-image: url("../images/stoelen.jpeg");
+  background-image: url("../images/stoelen.jpg");
   background-position: center;
+  background-repeat: no-repeat;
 }
 
-#ontdek section:nth-of-type(2) a {
+#ontdek section:nth-of-type(2) a { /*knoppen "Nu te zien" & "Plan uw bezoek" */
+  display: block;
+  width: 12em;
+  text-align: center;
   border: solid 0.1em rgb(75, 75, 75);
   padding: 1em;
   margin: auto;
   margin-top: 1em;
-  display: block;
-  width: 12em;
-  text-align: center;
 }
 
-#ontdek article:nth-of-type(2) img {
+#ontdek article:nth-of-type(2) img { /*foto Poppenhuis*/
   width: 100vw;
   margin: 2em 0em 2em 0em;
 }
 
-#ontdek main ul { /*social media iconen positioneren*/
+#ontdek main section ul { /*social media iconen positioneren*/
   display: flex;
   list-style: none;
   justify-content: center;
   margin: 1em;
 }
 
-#ontdek main ul li a img { /*social media iconen stylen*/
+#ontdek main section ul li a img { /*social media iconen stylen*/
   max-width: 2em;
   margin: 1em;
+}
+
+#ontdek main section:nth-of-type(2) ul li a {
+  border: none; /*border verwijderen geerfd van #ontdek section:nth-of-type(2) a*/
+  width: 6em;
 }
 
 /**************/
@@ -484,20 +488,60 @@ footer ul li:first-of-type { /*eerste icoon*/
 
   div { /*hierin staat de iframe video*/
     height: 375px; /*de div wordt geresized zodat de video er goed uitziet*/
+    margin-bottom: 2em; /*ruimte tussen de video en de lijst*/
   }
 
-  article{
+  header section:first-of-type ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
+    flex-direction: row; /*op tablet formaat komen de lijst items naast elkaar te staan*/
+  }
+
+  article {
     width: 50vw; /*hierdoor kunnen er 2 articles naast elkaar staan*/
   }
 
-  section article{
+  section article {
     width: 45vw; /*hierdoor kunnen er 2 articles naast elkaar staan*/
     display: inline-grid; /*zonder dit werd de article naar de volgende pagina geduwd*/
   }
 
-  section:nth-of-type(5) a{
+  section:nth-of-type(5) a {
     margin-left: 40%; /* "Meer..." button centeren*/
     width: 20%;
+  }
+
+  /*pagina 2*/
+
+  #ontdek header img:nth-of-type(2) { /*logo*/
+    left: -10em;
+  }
+
+  #ontdek header h1 {
+    width: 14em;
+  }
+
+  #ontdek article {
+    width: 100vw; /*niet 2 articles naast elkaar zoals op pagina 1*/
+  }
+
+  #ontdek article:nth-of-type(2) { /*img en tekst naast elkaar in een grid plaatsen*/
+    display: grid; 
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2em 2em 1fr;
+  }
+
+  #ontdek article:nth-of-type(2) img {
+    width: 50vw; /*hierdoor passen img en tekst naast elkaar*/
+    grid-row: -1/1; /*maakt de img even hoog als de rijen tekst ernaast*/
+  }
+
+  #ontdek article:nth-of-type(2) h4 {
+    width: 40vw;
+    grid-row: 2/3;
+  }
+
+  #ontdek article:nth-of-type(2) p {
+    width: 40vw;
+    grid-row: 3/4;
   }
 
 }
@@ -505,9 +549,38 @@ footer ul li:first-of-type { /*eerste icoon*/
 @media screen and (min-width: 1024px) { /*vanaf desktop formaat*/
   /*op desktop formaat komen sommige elementen weer onder elkaar te staan, anderen blijven naast elkaar*/
   /*en in sommige articles staat de tekst links of rechts van de afbeelding in plaats van er onder*/
+  /*ook staat het hamburger menu in een rij ipv column*/
 
   div { /*hierin staat de iframe video*/
     height: 500px;
+    width: 70vw;
+    margin-bottom: 0;
+  }
+
+  iframe {
+    height: 75%;
+  }
+
+  header {
+    display: flex;
+  }
+
+  header img { /*andere img kiezen en groter maken*/
+    width: 16em;
+  }
+
+  header button {
+    right: 2em;
+  }
+
+  header section {
+    width: 30vw;
+    align-self: center;
+    order: -1; /*zet de lijst aan de linkerkant van het scherm*/
+  }
+
+  header section:first-of-type ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
+    flex-direction: column; /*de items komen weer onder elkaar te staan*/
   }
 
   article{
@@ -530,6 +603,59 @@ footer ul li:first-of-type { /*eerste icoon*/
 
   section article img{
     width: 100%;
+  }
+
+  /*inhoud hamburger menu*/
+  nav, nav.open {
+    display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr;
+    grid-template-rows: 6em 1.5em 1fr;
+    grid-gap: 1em;
+  }
+
+  nav img {
+    grid-row: -1/1;
+    width: 14em;
+  }
+
+  nav h2 {
+    grid-row: 2/3;
+  }
+
+  nav ul {
+    grid-row: 3/4;
+  }
+
+  /*pagina 2*/
+
+  #ontdek article:first-of-type {
+    display: block; /*reset display:grid van article pagina 1*/
+  }
+
+  #ontdek header img {
+    height: 30em;
+  }
+
+  #ontdek header img:nth-of-type(2) {
+    left: -14em;
+  }
+
+  #ontdek header h1 {
+    font-size: 3em;
+    position: absolute;
+    left: 3em;
+    top: 7em;
+    width: 16em;
+  }
+
+  #ontdek section:first-of-type {
+    margin: 4em 1em;
+  }
+
+  #ontdek section p {
+    width: 75%;
+    display: block;
+    margin: auto;
   }
 
 }
