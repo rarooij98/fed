@@ -163,8 +163,8 @@ Na de toegankelijkheids test heb ik aangepast:
 ### Verslag van meeting
 hier na afloop snel de uitkomsten van de meeting vastleggen
 
-- Zet genoeg comments neer, ook meer in de html, dat zorgt voor betere overdraagbaarheid.
-- Je kan met a href="" linken naar de andere pagina van de site (is ook chill voor iemand door je site heen gaat om te testen).
+- Ik kreeg de tip: Zet genoeg comments neer, ook meer in de html, dat zorgt voor betere overdraagbaarheid. Nu heb ik heeel veeel comments geschreven.
+- Je kan met a href="" linken naar de andere pagina van de site (is ook relaxed voor iemand door je site heen gaat om te testen).
 
 </details>
 
@@ -181,7 +181,7 @@ Wat goed ging was het gebruiken van semantische html en selectors en het vermijd
 
 Ik vond het jammer dat ik geen tijd meer had om bijvoorbeeld het scroll effect met de tekst op de tweede pagina uit te werken (zie breakdown schets), of een darkmode te schrijven, want het responsive maken van de site nam meer tijd in beslag dan ik dacht.
 
-Uiteindelijk heb ik de site uitgewerkt voor 3 device grootes: mobiel(375x643), tablet(768x643) en desktop(1024x857). 
+Uiteindelijk heb ik de site 3 verschillende indelingen gegeven voor 3 device grootes: mobiel(375x643), tablet(768x643) en desktop(1024x857) (zie screenshots eindresultaat). 
 Ik had eerst wat moeite met het responsive maken van de website. Het was makkelijker geweest als ik in het begin al had geweten hoe ik de site responsive ging maken. Ik wilde bijvoorbeeld articles naast elkaar laten komen ipv eronder, en tekst naast een afbeelding in plaats van eronder. Ik heb uiteindelijk grid hiervoor gebruikt (in plaats van flexbox wat ik eerst probeerde), want met grid kon ik de afbeelding en tekst mooi naast elkaar zetten zonder extra div's te gebruiken.
 
 ### Screenshot(s)
