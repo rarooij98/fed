@@ -179,7 +179,7 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 ### Stand van zaken
 Wat goed ging was het gebruiken van semantische html en selectors en het vermijden van divs, classes en id's. Ik heb bijvoorbeeld veel nth-of-type selectors gebruikt. Ik vond het hierdoor wel soms moeilijk om overzicht te houden in de code, het zou helpen als ik eerder was begonnen met het schrijven van comments.
 
-Ik vond het jammer dat ik geen tijd meer had om het scroll effect met de tekst op de tweede pagina uit te werken (zie breakdown schets), want het responsive maken van de site nam meer tijd in beslag dan ik dacht.
+Ik vond het jammer dat ik geen tijd meer had om bijvoorbeeld het scroll effect met de tekst op de tweede pagina uit te werken (zie breakdown schets), of een darkmode te schrijven, want het responsive maken van de site nam meer tijd in beslag dan ik dacht.
 
 Uiteindelijk heb ik de site uitgewerkt voor 3 device grootes: mobiel(375x643), tablet(768x643) en desktop(1024x857). 
 Ik had eerst wat moeite met het responsive maken van de website. Het was makkelijker geweest als ik in het begin al had geweten hoe ik de site responsive ging maken. Ik wilde bijvoorbeeld articles naast elkaar laten komen ipv eronder, en tekst naast een afbeelding in plaats van eronder. Ik heb uiteindelijk grid hiervoor gebruikt (in plaats van flexbox wat ik eerst probeerde), want met grid kon ik de afbeelding en tekst mooi naast elkaar zetten zonder extra div's te gebruiken.
@@ -188,10 +188,10 @@ Ik had eerst wat moeite met het responsive maken van de website. Het was makkeli
 
 hier screenshot(s) van je eindresultaat
 
-<img src="images/mobiel.png" width="375px" alt="responsive resultaat mobiel">
-<img src="images/tablet.png" width="375px" alt="responsive resultaat tablet">
-<img src="images/desktop.png" width="375px" alt="responsive resultaat desktop">
-<img src="images/grid.png" width="375px" alt="voorbeeld grid menu">
+<img src="./images/mobiel.png" width="375px" alt="responsive resultaat mobiel">
+<img src="./images/tablet.png" width="375px" alt="responsive resultaat tablet">
+<img src="./images/desktop.png" width="375px" alt="responsive resultaat desktop">
+<img src="./images/grid.png" width="375px" alt="voorbeeld grid menu">
 
 </details>
 
