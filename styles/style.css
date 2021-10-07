@@ -511,6 +511,7 @@ footer ul li a img { /*social media iconen*/
 
   header section:first-of-type ul { /*lijst met links: Tickets, Nu te zien & Openingstijden*/
     flex-direction: column; /*de items komen weer onder elkaar te staan*/
+    overflow: visible; /*scroll verwijderen die geerfd wordt van de image scroll lijst*/
   }
 
   article{
