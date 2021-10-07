@@ -8,7 +8,7 @@
   margin: 0;
 }
 
-:root {
+:root { /*hier declare ik de css custom properties die ik in het hele document ga gebruiken*/
   --hoofd-kleur: rgb(250, 248, 239); /*beige*/
   --accent-kleur: rgb(225, 236, 244); /*blauw*/
 }
@@ -17,29 +17,23 @@
 
 main {
   display: flex;
-  flex-direction: row;
-  flex-wrap: wrap; /*voor responsive*/
-  overflow: hidden; /*verbergt menu uit beeld*/
+  flex-direction: row; /*bij desktop groote komen de articles naast elkaar te staan in een rij*/
+  flex-wrap: wrap; /*bij mobiel groote komen de articles onder elkaar te staan door hun width en flex:wrap*/
 }
 
 h1 {
-  color: rgb(0, 0, 0);
   font-weight: 900;
   font-size: 1.8em;
-  text-decoration: none;
   text-align: center;
   padding-top: 1em;
 }
 
 h2 {
-  color: rgb(0, 0, 0);
-  font-weight: 700;
   font-size: 1.6em;
   margin-left: .5em;
 }
 
 h3 {
-  color: rgb(0, 0, 0);
   text-align: center;
   padding-top: 1em;
 }
@@ -47,7 +41,6 @@ h3 {
 h4 {
   color: rgb(207, 24, 24);
   text-align: center;
-  padding-top: 2em;
 }
 
 h5 {
@@ -77,13 +70,7 @@ form input {
   padding: 1em;
 }
 
-figure img {
-  max-height: 30em;
-  max-width: 20em;
-}
-
 figcaption p {
-  text-transform: lowercase;
   width: 20em;
   text-align: center;
 }
@@ -91,45 +78,42 @@ figcaption p {
 /* HEADER */
 
 header {
-  position: relative;
-  background-color: rgb(250, 248, 239);
+  background-color: var(--hoofd-kleur);
 }
 
-header img {
+header img { /*logo van het museum*/
+  position: absolute; /*image wordt uit de flow gehaald, zodat het bovenop de andere elementen komt te staan*/
+  top: .5em;
+  left: -5em; /*de image moet deels verborgen zijn, daarom een negatief getal*/
   width: 14em;
-  position: absolute;
-  left: -5em;
-  top: 2%;
 }
 
 div { /*hierin staat de iframe video*/
-  position: relative;
-  top: 0;
-  width: 100vw;
-  height: 188px;
+  position: relative; /*zodat header img position:absolute kan hebben binnen deze parent*/
+  height: 188px; /*op deze div hoogte vult de iframe video precies het scherm zonder witruimte*/
 }
 
 iframe {
   pointer-events: none; /*omdat anders de menu button niet klikbaar is*/
+  border: none;
   width: 100%; /*iframe vult de volledige breedte van de div*/
   height: 110%;
-  border: none;
 }
 
 header button { /*hamburger menu button*/
-  z-index: 999; /*het menu moet altijd bovenop blijven staan*/
-  position: fixed; /*menu moet meescrollen over de hele pagina*/
+  z-index: 999; /*het menu moet altijd bovenop blijven staan, bijv. als het menu in beeld schuift*/
+  position: fixed; /*menu moet meescrollen met de pagina, altijd in de hoek van het scherm blijven staat*/
   top: 2em;
+  right: 2em;
   width: 3.5em;
   height: 3.5em;
   padding: 1em;
-  right: 2em;
   border-radius: 2em;
   background-color: var(--hoofd-kleur);
-  background-image: url("../images/hamburger.png");
+  background-image: url("../images/hamburger.png"); /*menu icoon*/
   background-repeat: no-repeat;
   background-size: 2em;
-  background-position: center; /*shorthand schrijven voor background?*/
+  background-position: center;
 }
 
 header button:focus { 
@@ -139,12 +123,11 @@ header button:focus {
 
 header div a {
   /* "Ontdek meer" link*/
-  position: relative;
+  position: relative; /*positioneren met top, bottom, left en right vanaf de default positie*/
   top: -5em; /*over de iframe video heen zetten*/
   width: fit-content;
-  margin: auto;
+  margin: auto; /*centreren*/
   display: block;
-
   padding: .75em;
   border: 1px solid rgb(255, 255, 255);
   color: rgb(255, 255, 255);
@@ -159,9 +142,8 @@ header div a:active {
   border: none;
 }
 
-header section:first-of-type ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
+header section ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
   flex-direction: column;
-  overflow: hidden; /*geen scroll*/
   padding: 2em 2em;
 }
 
@@ -172,14 +154,7 @@ header section ul li {
 header section ul li a {
   color: rgb(49, 49, 49);
   font-size: 1.2em;
-
-  /*resetten van styling geerft van header a*/
-  text-transform: none;
   text-decoration: underline;
-  font-weight: 300;
-  border: none;
-  top: 0;
-  padding: 0;
 }
 
 header ul li a:focus { 
@@ -189,9 +164,8 @@ header ul li a:focus {
 /* NAV */
 
 nav {
-  overflow: auto;
-  position: fixed;
-  z-index: 998;
+  overflow: auto; /*hierdoor kan je in het menu naar beneden scrollen*/
+  position: fixed; /*hierdoor scrolt het menu mee over de hele pagina, net als de menu button*/
   top: 0;
   background-color: rgb(255, 255, 255);
   width: 100vw;
@@ -201,7 +175,7 @@ nav {
 }
 
 button {
-  transition: .5s;
+  transition: .5s; /*het veranderen van de background image van de button duurt 0.5 seconden*/
 }
 
 nav.open {
@@ -217,7 +191,7 @@ nav ul {
   list-style: none;
 }
 
-nav ul li a:first-of-type { /*linkjes in het hamburger menu*/
+nav ul li a { /*linkjes in het hamburger menu*/
   text-decoration: none; /*de linkjes in het hamburger menu krijgen geen underline*/
   display: block;
   padding: .75em;
@@ -232,19 +206,12 @@ nav img { /*logo*/
 
 nav h2 {
   font-size: 1.5em;
-  margin-left: 1.3em;
+  margin-left: 1.2em;
 }
 
 /* ARTICLES & SECTIONS */
 
-article {
-  background-color: var(--accent-kleur);
-  display: flex;
-  flex-direction: column;
-  width: 100vw;
-}
-
-section {
+section, article {
   width: 100vw;
 }
 
@@ -253,54 +220,58 @@ article img, figure img {
   margin: 1em 1em;
 }
 
-section:first-of-type, section:nth-of-type(3) {
+section, section:nth-of-type(3) {
   background-color: var(--hoofd-kleur);
 }
 
-section:nth-of-type(2), section:nth-of-type(4), section:nth-of-type(5) {
+article, section:nth-of-type(2), section:nth-of-type(4), section:nth-of-type(5) {
   background-color: var(--accent-kleur);
 }
 
-section:nth-of-type(1) ul { /*de horizontale lijst met images waar je doorheen scrollt*/
+section ul { /*de horizontale lijst met images waar je doorheen scrollt*/
   display: flex; /*plaatst de list items in een row waardoor de lijst horizontaal wordt geplaatst*/
   overflow: scroll; /*maakt de lijst scrolbaar*/
   list-style: none;
   align-items: baseline;
 }
 
-section:nth-of-type(1) ul li img { /*de images in de scroll lijst*/
+section ul li img { /*de images in de scroll lijst*/
   display: block;
   margin: auto; /*centreert de images boven de tekst*/
 }
 
 article a:nth-of-type(3) { /* "Meer info" button*/
-  margin: 1em;
+  display: block; /*margins top en bottom werkten eerst niet omdat a een inline element is*/
+  margin: 1em 1em;
   padding: 1em;
   border: .5px solid rgb(0, 0, 0);
   width: 40%;
 }
 
+article a:nth-of-type(3):focus { /* "Meer info" button focus state*/
+  background-color: rgb(130, 202, 253);
+}
+
 section:nth-of-type(3) a { /*privacy statement link*/
   text-decoration: underline;
-  margin: 1em;
+  display: block;
+  margin: 1em 1em;
 }
 
 section:nth-of-type(5) ul { /*social media iconen*/
   display: flex; /*flexbox om de iconen in een rij te zetten*/
   justify-content: center; /*iconen centreren*/
-  list-style: none;
-  padding: 1em;
 }
 
 section:nth-of-type(5) ul img { /*social media iconen kleiner maken*/
   max-width: 2em;
-  max-height: 2em;
 }
 
-section:nth-of-type(5) a { /* "Meer..." button border geven*/
-  width: 35%;
+section:nth-of-type(5) a { /*"Meer..." button*/
   display: block;
-  margin: 1em 10em 1em 1em;
+  margin: auto;
+  margin-top: 2em;
+  width: 35%;
   padding: 1em;
   border: .5px solid rgb(0, 0, 0);
 }
@@ -331,10 +302,6 @@ footer a {
   text-decoration: underline;
 }
 
-footer h5 {
-  margin-bottom: 1.5em;
-}
-
 footer ul { /*social media iconen*/
   display: flex; /*flexbox om de iconen in een rij te zetten*/
   list-style: none;
@@ -345,71 +312,46 @@ footer ul li a img { /*social media iconen*/
   margin-bottom: 2em;
 }
 
-footer ul li:first-of-type { /*eerste icoon*/
-  margin-left: 1em; /*schuift de rij iconen naar rechts*/
-}
-
 /**********************************/
 /* EXTRA STYLING VOOR ONTDEK.HTML */
 /**********************************/
 
 #ontdek header {
-  position: relative;
-  overflow: hidden;
   background-color: rgb(255, 255, 255);
 }
 
 #ontdek header h1 {
-  position: relative;
-  margin: auto;
+  position: relative; /*h1 beweegt top, left, right en bottom vanaf de default positie*/
   top: -4em;
+  margin: auto;
   width: 10em;
   color: rgb(255, 255, 255);
   font-size: 6vw; /*de lettergroote schaalt mee met de schermgroote*/
 }
 
-#ontdek header img {
-  position: static;
-  width: 100vw;
+#ontdek header img { /*foto van het museum*/
+  position: static; /*reset van position:absolute geerfd van header img van pagina 1*/
+  width: 100vw; /*foto staat over de gehele header heen*/
   top: 0;
   right: 0;
   left: 0;
 }
 
-#ontdek header img:nth-of-type(2) { /*logo*/
-  position: absolute;
+#ontdek header img:nth-of-type(2) { /*logo van het museum*/
+  position: absolute; /*het logo gaat uit de flow, waardoor het bovenop de foto gaat staan*/
   top: 2em;
   left: -5em;
   width: 50%;
 }
 
-#ontdek header button { /*hamburger menu button*/
-  position: fixed;
-  top: 2em;
-  right: 2em;
-  width: 3.5em;
-  height: 3.5em;
-  padding: 1em;
-  border: none;
-}
-
-#ontdek nav img {
-  width: 75%;
-}
-
-#ontdek nav h2 {
-  text-align: left;
-  padding: 0;
-}
-
-#ontdek h2 {
+#ontdek section h2 {
   text-align: center;
   padding: .5em;
 }
 
-#ontdek article h4 {
+#ontdek article h4 { /*titel collectie Poppenhuis*/
   text-align: left;
-  margin-left: 1em;
+  margin-left: 1.2em;
 }
 
 #ontdek section, #ontdek article {
@@ -420,14 +362,20 @@ footer ul li:first-of-type { /*eerste icoon*/
   background-color: var(--accent-kleur);
 }
 
-#ontdek section p {
+#ontdek section p { /*intro tekst*/
   padding: 1.5em;
   text-align: center;
   font-size: 1.2em;
   line-height: 2em;
 }
 
-#ontdek article:first-of-type p {
+#ontdek article:first-of-type { /*article over Rietveld collectie*/
+  background-image: url("../images/stoelen.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#ontdek article:first-of-type p { /*tekst Rietveld collectie*/
   padding: 1.5em;
   text-align: left;
   font-size: 1.5em;
@@ -435,24 +383,14 @@ footer ul li:first-of-type { /*eerste icoon*/
   line-height: 2em;
 }
 
-#ontdek article p:first-of-type {
-  font-size: 1.2em;
-}
-
-#ontdek article:first-of-type {
-  background-image: url("../images/stoelen.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
 #ontdek section:nth-of-type(2) a { /*knoppen "Nu te zien" & "Plan uw bezoek" */
-  display: block;
+  display: block; /*de linkjes staan onder elkaar, ze nemen de hele regel in*/
+  margin: auto; /*centreren*/
   width: 12em;
+  padding: 1em;
+  margin-top: 1em;
   text-align: center;
   border: solid 0.1em rgb(75, 75, 75);
-  padding: 1em;
-  margin: auto;
-  margin-top: 1em;
 }
 
 #ontdek article:nth-of-type(2) img { /*foto Poppenhuis*/
@@ -461,9 +399,9 @@ footer ul li:first-of-type { /*eerste icoon*/
 }
 
 #ontdek main section ul { /*social media iconen positioneren*/
-  display: flex;
-  list-style: none;
+  display: flex; /*zet de iconen in een rij naast elkaar*/
   justify-content: center;
+  list-style: none;
   margin: 1em;
 }
 
@@ -472,8 +410,8 @@ footer ul li:first-of-type { /*eerste icoon*/
   margin: 1em;
 }
 
-#ontdek main section:nth-of-type(2) ul li a {
-  border: none; /*border verwijderen geerfd van #ontdek section:nth-of-type(2) a*/
+#ontdek main section:nth-of-type(2) ul li a { /*social media links*/
+  border: none; /*border en width resetten, geerfd van #ontdek section:nth-of-type(2) a */
   width: 6em;
 }
 
@@ -487,8 +425,8 @@ footer ul li:first-of-type { /*eerste icoon*/
   /*op tablet formaat komen sommige elementen naast elkaar te staan in plaats van onder elkaar*/
 
   div { /*hierin staat de iframe video*/
-    height: 375px; /*de div wordt geresized zodat de video er goed uitziet*/
-    margin-bottom: 2em; /*ruimte tussen de video en de lijst*/
+    height: 375px; /*de div wordt geresized zodat de video meeschaalt en er goed uit blijft zien*/
+    margin-bottom: 2em; /*ruimte tussen de video en de lijst met links*/
   }
 
   header section:first-of-type ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
@@ -504,37 +442,32 @@ footer ul li:first-of-type { /*eerste icoon*/
     display: inline-grid; /*zonder dit werd de article naar de volgende pagina geduwd*/
   }
 
-  section:nth-of-type(5) a {
-    margin-left: 40%; /* "Meer..." button centeren*/
+  section:nth-of-type(5) a { /*"Meer" button*/
     width: 20%;
   }
 
   /*pagina 2*/
 
-  #ontdek header img:nth-of-type(2) { /*logo*/
-    left: -10em;
-  }
-
-  #ontdek header h1 {
-    width: 14em;
+  #ontdek header img:nth-of-type(2) { /*logo van het museum*/
+    left: -10em; /*logo deels uit beeld schuiven*/
   }
 
   #ontdek article {
-    width: 100vw; /*niet 2 articles naast elkaar zoals op pagina 1*/
+    width: 100vw; /*zodat niet 2 articles naast elkaar kunnen staan zoals op pagina 1*/
   }
 
-  #ontdek article:nth-of-type(2) { /*img en tekst naast elkaar in een grid plaatsen*/
+  #ontdek article:nth-of-type(2) { /*foto en tekst naast elkaar in een grid plaatsen*/
     display: grid; 
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 2em 2em 1fr;
   }
 
-  #ontdek article:nth-of-type(2) img {
-    width: 50vw; /*hierdoor passen img en tekst naast elkaar*/
-    grid-row: -1/1; /*maakt de img even hoog als de rijen tekst ernaast*/
+  #ontdek article:nth-of-type(2) img { /*foto van collectie Poppenhuis*/
+    width: 50vw; /*hierdoor passen foto en tekst naast elkaar*/
+    grid-row: -1/1; /*maakt de foto even hoog als de rijen tekst ernaast*/
   }
 
-  #ontdek article:nth-of-type(2) h4 {
+  #ontdek article:nth-of-type(2) h4 { /*titel collectie Poppenhuis*/
     width: 40vw;
     grid-row: 2/3;
   }
@@ -552,53 +485,50 @@ footer ul li:first-of-type { /*eerste icoon*/
   /*ook staat het hamburger menu in een rij ipv column*/
 
   div { /*hierin staat de iframe video*/
-    height: 500px;
+    height: 500px; /*de div wordt geresized zodat de video meeschaalt en er goed uit blijft zien*/
     width: 70vw;
-    margin-bottom: 0;
+    margin-bottom: 0; /*ruimte tussen de video en de links is niet meer nodig, want de links staan nu naast de video*/
   }
 
-  iframe {
-    height: 75%;
+  iframe { /*hierin wordt de video van het museum geladen*/
+    /*de video die in de iframe wordt geladen heeft witruimte boven en beneden die ik niet weg kan halen*/
+    height: 75%; /*de kleinere hoogte van de iframe duwt de video naar boven, waardoor er geen witruimte meer is bovenaan de pagina*/
   }
 
   header {
-    display: flex;
+    display: flex; /*om de links naast de rest van de header te zetten in plaats van er onder*/
   }
 
-  header img { /*andere img kiezen en groter maken*/
+  header img { /*logo van het museum*/
     width: 16em;
   }
 
-  header button {
-    right: 2em;
-  }
-
-  header section {
+  header section { /*section met lijst met links*/
     width: 30vw;
     align-self: center;
-    order: -1; /*zet de lijst aan de linkerkant van het scherm*/
+    order: -1; /*zet de links aan de linkerkant van de rest van de header*/
   }
 
-  header section:first-of-type ul { /*lijst met Tickets, Nu te zien & Openingstijden*/
+  header section:first-of-type ul { /*lijst met links: Tickets, Nu te zien & Openingstijden*/
     flex-direction: column; /*de items komen weer onder elkaar te staan*/
   }
 
   article{
-    width: 100vw; /*hierdoor komen de articles weer onder elkaar te staan*/
-    display: grid; /*grid om de tekst rechts van de afbeelding te zetten*/
-    grid-template-rows: 1fr 1fr 1fr 1fr; /*tekst positioneren*/
-    align-items: center;
-    padding: 2em;
-  }
-
-  section article{ /*zelfde voor de articles die in een section staan*/
-    grid-template-rows: 0.5fr 0.5fr 0.5fr 2fr; /*tekst positioneren*/
+    width: 100vw; /*de articles weer onder elkaar te staan, omdat ze elk de hele breedte innemen*/
+    display: grid; /*grid gebruikt om de tekst rechts van de afbeelding te zetten*/
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+    grid-template-columns: 2fr 1fr;
     align-items: start;
-    padding: 2em;
+    padding: 1em 0em;
   }
 
   article a:first-of-type{
     grid-row: 1 / -1; /*maakt de img even hoog als de rijen tekst ernaast*/
+  }
+
+  section article{
+    display: inline-block; /*alleen de articles die niet in een section staan moeten in de grid gaan staan*/
+    padding: 2em;
   }
 
   section article img{
@@ -607,14 +537,14 @@ footer ul li:first-of-type { /*eerste icoon*/
 
   /*inhoud hamburger menu*/
   nav, nav.open {
-    display: grid;
+    display: grid; /*met grid de menu elementen naast elkaar gezet in plaats van onder elkaar*/
     grid-template-columns: 1fr 2fr 2fr 2fr;
     grid-template-rows: 6em 1.5em 1fr;
     grid-gap: 1em;
   }
 
-  nav img {
-    grid-row: -1/1;
+  nav img { /*logo van het museum*/
+    grid-row: -1/1; /*het logo neemt de hele linker rij in zodat de tekts er niet overheen loopt*/
     width: 14em;
   }
 
@@ -632,32 +562,32 @@ footer ul li:first-of-type { /*eerste icoon*/
     display: block; /*reset display:grid van article pagina 1*/
   }
 
-  #ontdek header img {
+  #ontdek header img { /*achtergrond foto van de header kleiner maken*/
     height: 30em;
   }
 
-  #ontdek header img:nth-of-type(2) {
-    left: -14em;
+  #ontdek header nav img { /*nav image (logo) weer groter maken*/
+    height: 16em;
   }
 
-  #ontdek header h1 {
-    font-size: 3em;
-    position: absolute;
-    left: 3em;
+  #ontdek header img:nth-of-type(2) { /*logo van het museum*/
+    left: -14em; /*logo half buiten beeld schuiven*/
+  }
+
+  #ontdek header h1 { /*welkoms tekst*/
+    position: absolute; /*h1 gaat uit de flow zodat het bovenop de foto gaat staan*/
     top: 7em;
+    left: 3em;
     width: 16em;
+    font-size: 3em;
   }
 
-  #ontdek section:first-of-type {
-    margin: 4em 1em;
+  #ontdek section:first-of-type { /*section met intro tekst*/
+    margin: 4em 1em; /*meer witruimte om de intro tekst heen*/
   }
 
-  #ontdek section p {
+  #ontdek section p { /*intro tekst*/
     width: 75%;
-    display: block;
     margin: auto;
   }
-
 }
-
-

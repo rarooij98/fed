@@ -31,11 +31,9 @@ Responsive
 https://www.centraalmuseum.nl/nl
 
 #### Screenshot(s) van de eerste pagina (small screen): 
-homepage  
 <img src="/images/1a.png" width="375px" alt="homepage van het centraal museum">
 
 #### Screenshot(s) van de tweede pagina (small screen):
-about us page
 <img src="images/2b.jpg" width="375px" alt="about us page van het centraal museum">
  
 </details>
@@ -55,7 +53,7 @@ about us page
 
 ### dynamisch deel (bijv menu): 
 <img src="images/carousel.jpg" width="375px" alt="breakdown van image carousel">
-// kan ook de lijst in een flexbox zetten en overflow:scroll gebruiken
+// kan ook de lijst in een flexbox zetten met overflow:scroll
 <img src="images/navigation.jpg" width="375px" alt="breakdown van de navigatie"> 
 <img src="images/scroll.jpg" width="375px" alt="breakdown van het text over image scrollen">
 
@@ -110,7 +108,7 @@ about us page
 ## Toegankelijkheidstest (week 4)
 
 <details open>
-<summary>uitwerken na test in 8e voortgang</summary>
+<summary>uitwerken na test</summary>
 
 ### Bevindingen
 Lijst met je bevindingen die in de test naar voren kwamen:
@@ -180,6 +178,8 @@ hier na afloop snel de uitkomsten van de meeting vastleggen
 
 ### Stand van zaken
 Wat goed ging was het gebruiken van semantische html en selectors en het vermijden van divs, classes en id's. Ik heb bijvoorbeeld veel nth-of-type selectors gebruikt. Ik vond het hierdoor wel soms moeilijk om overzicht te houden in de code, het zou helpen als ik eerder was begonnen met het schrijven van comments.
+
+Ik vond het jammer dat ik geen tijd meer had om het scroll effect met de tekst op de tweede pagina uit te werken (zie breakdown schets), want het responsive maken van de site nam meer tijd in beslag dan ik dacht.
 
 Uiteindelijk heb ik de site uitgewerkt voor 3 device grootes: mobiel(375x643), tablet(768x643) en desktop(1024x857). 
 Ik had eerst wat moeite met het responsive maken van de website. Het was makkelijker geweest als ik in het begin al had geweten hoe ik de site responsive ging maken. Ik wilde bijvoorbeeld articles naast elkaar laten komen ipv eronder, en tekst naast een afbeelding in plaats van eronder. Ik heb uiteindelijk grid hiervoor gebruikt (in plaats van flexbox wat ik eerst probeerde), want met grid kon ik de afbeelding en tekst mooi naast elkaar zetten zonder extra div's te gebruiken.
