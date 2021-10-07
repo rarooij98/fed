@@ -188,10 +188,10 @@ Ik had eerst wat moeite met het responsive maken van de website. Het was makkeli
 
 hier screenshot(s) van je eindresultaat
 
-<img src="./images/mobiel.png" width="375px" alt="responsive resultaat mobiel">
-<img src="./images/tablet.png" width="375px" alt="responsive resultaat tablet">
-<img src="./images/desktop.png" width="375px" alt="responsive resultaat desktop">
-<img src="./images/grid.png" width="375px" alt="voorbeeld grid menu">
+<img src="images/mobiel.PNG" width="375px" alt="responsive resultaat mobiel">
+<img src="images/tablet.PNG" width="375px" alt="responsive resultaat tablet">
+<img src="images/desktop.PNG" width="375px" alt="responsive resultaat desktop">
+<img src="images/grid.PNG" width="375px" alt="voorbeeld grid menu">
 
 </details>
 
